@@ -10,7 +10,12 @@ const Modal = ({ toggleModal, emailValue }: ModalProps) => {
     <div className="modal">
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
-        <img src="/images/message.svg" alt="email sent" className="message" />
+        <img
+          src="/images/message.svg"
+          alt="email sent"
+          className="message"
+          loading="lazy"
+        />
         <h2>Please verify your email</h2>
         <p>You're almost there! We sent an email to</p>
         <h3>{emailValue}</h3>
@@ -23,9 +28,9 @@ const Modal = ({ toggleModal, emailValue }: ModalProps) => {
 
         <p className="recovery">Still can't find the email? No problem.</p>
         <button className="recoveryBtn">Resend Verification Email</button>
-        <button className="close-modal" onClick={toggleModal}>
-          <img src="/images/closebtn.png" alt="close button" />
-        </button>
+        <div className="close-modal" onClick={toggleModal}>
+          <i className="ri-close-line " style={{ fontSize: "1.5rem" }}></i>
+        </div>
       </div>
     </div>
   );

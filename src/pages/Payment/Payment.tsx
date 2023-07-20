@@ -123,7 +123,7 @@ const Payment = () => {
                 <div className="input-box">
                   <label htmlFor="phone">Phone Number</label>
                   <Field
-                    type="text"
+                    type="number"
                     name="phone"
                     placeholder="Phone number"
                     autoComplete="tel-national"
@@ -172,7 +172,11 @@ const Payment = () => {
               <div className="rental-info__body">
                 <div className="rental-form__header flex-normal">
                   <div className="rental-form__header-mark">
-                    <img src="/images/Ellipse 11.svg" alt="mark" />
+                    <img
+                      src="/images/Ellipse 11.svg"
+                      alt="mark"
+                      loading="lazy"
+                    />
                   </div>
                   <h3>Pick-Up</h3>
                 </div>
@@ -215,7 +219,11 @@ const Payment = () => {
 
                 <div className="rental-form__header flex-normal">
                   <div className="rental-form__header-mark">
-                    <img src="/images/Ellipse 11.svg" alt="mark" />
+                    <img
+                      src="/images/Ellipse 11.svg"
+                      alt="mark"
+                      loading="lazy"
+                    />
                   </div>
                   <h3>Drop-Off</h3>
                 </div>
@@ -271,13 +279,17 @@ const Payment = () => {
                 <div className="flex-between">
                   <div className="flex-normal">
                     <div className="rental-form__header-mark">
-                      <img src="/images/Ellipse 11.svg" alt="mark" />
+                      <img
+                        src="/images/Ellipse 11.svg"
+                        alt="mark"
+                        loading="lazy"
+                      />
                     </div>
                     <h3>Credit Card</h3>
                   </div>
                   <div className="flex-normal">
-                    <img src="/images/visa.svg" alt="visa" />
-                    <img src="/images/mc.svg" alt="mc" />
+                    <img src="/images/visa.svg" alt="visa" loading="lazy" />
+                    <img src="/images/mc.svg" alt="mc" loading="lazy" />
                   </div>
                 </div>
                 <div className="user-details">
@@ -334,7 +346,7 @@ const Payment = () => {
                     <Field type="radio" value="paypal" name="paymentMethod" />
                     <label htmlFor="paypal">Paypal</label>
                   </div>
-                  <img src="/images/PayPal.svg" alt="paypal" />
+                  <img src="/images/PayPal.svg" alt="paypal" loading="lazy" />
                 </div>
               </div>
 
@@ -344,7 +356,7 @@ const Payment = () => {
                     <Field type="radio" value="bitcoin" name="paymentMethod" />
                     <label htmlFor="bitcoin">Bitcoin</label>
                   </div>
-                  <img src="/images/Bitcoin.svg" alt="bitcoin" />
+                  <img src="/images/Bitcoin.svg" alt="bitcoin" loading="lazy" />
                 </div>
               </div>
               <ErrorMessage
@@ -405,7 +417,7 @@ const Payment = () => {
               </div>
 
               <div className="confirmation__footer">
-                <img src="/images/secure.png" alt="secure" />
+                <img src="/images/secure.png" alt="secure" loading="lazy" />
                 <h4>All your data are safe</h4>
                 <p>
                   We are using the most advanced security to provide you the
@@ -425,16 +437,20 @@ const Payment = () => {
               </div>
               <div className="rental-img__container">
                 <div className="car-image">
-                  <img src={view1} alt={name} />
+                  <img src={view1} alt={name} loading="lazy" />
                 </div>
                 <div className="car-desc">
                   <h1>{name}</h1>
                   <div className="flex-nogap">
-                    <img src="/images/star.png" alt="star" />
-                    <img src="/images/star.png" alt="star" />
-                    <img src="/images/star.png" alt="star" />
-                    <img src="/images/star.png" alt="star" />
-                    <img src="/images/star-empty.png" alt="star" />
+                    <img src="/images/star.png" alt="star" loading="lazy" />
+                    <img src="/images/star.png" alt="star" loading="lazy" />
+                    <img src="/images/star.png" alt="star" loading="lazy" />
+                    <img src="/images/star.png" alt="star" loading="lazy" />
+                    <img
+                      src="/images/star-empty.png"
+                      alt="star"
+                      loading="lazy"
+                    />
                     <span>440+ Reviewer</span>
                   </div>
                 </div>

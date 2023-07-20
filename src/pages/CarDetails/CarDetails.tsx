@@ -83,15 +83,27 @@ export const CarDetails = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src={cardData.images.view1} alt={cardData.name} />
+              <img
+                src={cardData.images.view1}
+                alt={cardData.name}
+                loading="lazy"
+              />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src={cardData.images.view2} alt={cardData.name} />
+              <img
+                src={cardData.images.view2}
+                alt={cardData.name}
+                loading="lazy"
+              />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src={cardData.images.view3} alt={cardData.name} />
+              <img
+                src={cardData.images.view3}
+                alt={cardData.name}
+                loading="lazy"
+              />
             </SwiperSlide>
           </Swiper>
 
@@ -99,11 +111,11 @@ export const CarDetails = () => {
             <div className="car-context__header">
               <h1>{cardData.name}</h1>
               <div className="car-context__header-flex">
-                <img src="/images/star.png" alt="star" />
-                <img src="/images/star.png" alt="star" />
-                <img src="/images/star.png" alt="star" />
-                <img src="/images/star.png" alt="star" />
-                <img src="/images/star-empty.png" alt="star" />
+                <img src="/images/star.png" alt="star" loading="lazy" />
+                <img src="/images/star.png" alt="star" loading="lazy" />
+                <img src="/images/star.png" alt="star" loading="lazy" />
+                <img src="/images/star.png" alt="star" loading="lazy" />
+                <img src="/images/star-empty.png" alt="star" loading="lazy" />
 
                 <span>440+ Reviewer</span>
               </div>

@@ -25,7 +25,7 @@ export const HomeCard = (props: HomeCardProps) => {
       </div>
 
       <div className={props.classNameImage}>
-        <img src={props.image} alt="white car" />
+        <img src={props.image} alt="white car" loading="lazy" />
       </div>
     </div>
   );

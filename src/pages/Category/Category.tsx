@@ -117,6 +117,7 @@ const Category = () => {
               src={`/images/carrentlogo.png`}
               alt="car rent logo"
               style={{ width: "40px", height: "40px" }}
+              loading="lazy"
             />
           </Link>
           <form action="">

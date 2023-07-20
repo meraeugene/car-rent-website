@@ -12,7 +12,7 @@ export const CarPickDropCard = (props: CarPickDropProps) => {
     <div className="pickdrop__container">
       <div className="pickdrop__container-header">
         <div className="pickdrop__container-header-img">
-          <img src="/images/Ellipse 11.svg" alt="elipse" />
+          <img src="/images/Ellipse 11.svg" alt="elipse" loading="lazy" />
         </div>
         <span>{props.headerTitle}</span>
       </div>

@@ -13,7 +13,7 @@ const Reviews = ({ img, title, role, desc, date }: ReviewsProps) => {
     <div className="reviews__container-content">
       <div className="reviews-content__body">
         <div className="reviews-content-profile">
-          <img src={img} alt="profile" />
+          <img src={img} alt="profile" loading="lazy" />
           <div className="reviews-content-desc">
             <h2>{title}</h2>
             <h4>{role}</h4>
@@ -22,11 +22,11 @@ const Reviews = ({ img, title, role, desc, date }: ReviewsProps) => {
 
         <div className="reviews-content-stars">
           <div className="reviews-content-stars-flex">
-            <img src="/images/star.png" alt="star" />
-            <img src="/images/star.png" alt="star" />
-            <img src="/images/star.png" alt="star" />
-            <img src="/images/star.png" alt="star" />
-            <img src="/images/star-empty.png" alt="star" />
+            <img src="/images/star.png" alt="star" loading="lazy" />
+            <img src="/images/star.png" alt="star" loading="lazy" />
+            <img src="/images/star.png" alt="star" loading="lazy" />
+            <img src="/images/star.png" alt="star" loading="lazy" />
+            <img src="/images/star-empty.png" alt="star" loading="lazy" />
           </div>
           <h4>{date}</h4>
         </div>

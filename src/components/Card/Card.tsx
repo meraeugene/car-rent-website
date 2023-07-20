@@ -76,9 +76,9 @@ export const Card = ({ array }: CardProps) => {
                   onClick={toggleLike}
                 >
                   {isLiked ? (
-                    <img src="/images/Like Red.svg" alt="" />
+                    <img src="/images/Like Red.svg" alt="" loading="lazy" />
                   ) : (
-                    <img src="/images/Like.svg" alt="" />
+                    <img src="/images/Like.svg" alt="" loading="lazy" />
                   )}
                 </button>
               </div>
@@ -87,19 +87,31 @@ export const Card = ({ array }: CardProps) => {
             <Link to={`/cars/${card.id}`} state={{ cardData: card }}>
               <div className="card__body">
                 <div className="card__content-img">
-                  <img src={card.images.view1} alt="car" />
+                  <img src={card.images.view1} alt="car" loading="lazy" />
                 </div>
                 <div className="card__content-modes">
                   <div className="gas">
-                    <img src="/images/gas-station.svg" alt="gas logo" />
+                    <img
+                      src="/images/gas-station.svg"
+                      alt="gas logo"
+                      loading="lazy"
+                    />
                     <span>{card.gas}</span>
                   </div>
                   <div className="mode">
-                    <img src="/images/Car.svg" alt="drive logo" />
+                    <img
+                      src="/images/Car.svg"
+                      alt="drive logo"
+                      loading="lazy"
+                    />
                     <span>{card.drive_mode}</span>
                   </div>
                   <div className="people">
-                    <img src="/images/profile-2user.svg" alt="people logo" />
+                    <img
+                      src="/images/profile-2user.svg"
+                      alt="people logo"
+                      loading="lazy"
+                    />
                     <span>{card.people} People</span>
                   </div>
                 </div>

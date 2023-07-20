@@ -34,6 +34,7 @@ export const Account = () => {
             src={`/images/carrentlogo.png`}
             alt="car rent logo"
             style={{ width: "40px", height: "40px" }}
+            loading="lazy"
           />
         </Link>
         <div className="main-menu__container">
@@ -41,26 +42,39 @@ export const Account = () => {
 
           <ul>
             <Link to="/account" className="active custom-link">
-              <img src="images/aside icons/home.svg" alt="home" />
+              <img
+                src="images/aside icons/home.svg"
+                alt="home"
+                loading="lazy"
+              />
               <span>Dashboard</span>
             </Link>
             <Link to="/" className="custom-link">
-              <img src="images/aside icons/car.svg" alt="car" />
+              <img src="images/aside icons/car.svg" alt="car" loading="lazy" />
               <span>Car Rent</span>
             </Link>
             <Link to="/insight" className="custom-link">
-              <img src="images/aside icons/chart.svg" alt="chart" />
+              <img
+                src="images/aside icons/chart.svg"
+                alt="chart"
+                loading="lazy"
+              />
               <span>Insight</span>
             </Link>
             <Link to="/reimburse" className="custom-link">
               <img
                 src="images/aside icons/empty-wallet-change.svg"
                 alt="empty wallet"
+                loading="lazy"
               />
               <span>Reimburse</span>
             </Link>
             <Link to="/calendar" className="custom-link">
-              <img src="images/aside icons/calendar.svg" alt="calendar" />
+              <img
+                src="images/aside icons/calendar.svg"
+                alt="calendar"
+                loading="lazy"
+              />
               <span>Calendar</span>
             </Link>
           </ul>
@@ -77,17 +91,29 @@ export const Account = () => {
           <span>PREFERENCES</span>
           <ul>
             <Link to="/settings" className=" custom-link">
-              <img src="images/aside icons/setting.svg" alt="setting" />
+              <img
+                src="images/aside icons/setting.svg"
+                alt="setting"
+                loading="lazy"
+              />
               <span>Settings</span>
             </Link>
             <Link to="/helpcenter" className="custom-link">
-              <img src="images/aside icons/info-circle.svg" alt="help&center" />
+              <img
+                src="images/aside icons/info-circle.svg"
+                alt="help&center"
+                loading="lazy"
+              />
               <span>Help & Center</span>
             </Link>
             <li className="custom-link">
               <div className="flex-between">
                 <div className="darkmode-left-col">
-                  <img src="images/aside icons/briefcase.svg" alt="briefcase" />
+                  <img
+                    src="images/aside icons/briefcase.svg"
+                    alt="briefcase"
+                    loading="lazy"
+                  />
                   <span>Dark Mode</span>
                 </div>
                 <div
@@ -113,7 +139,7 @@ export const Account = () => {
                           />
                         </svg>
                       ) : (
-                        <img src="/images/sun.svg" alt="sun" />
+                        <img src="/images/sun.svg" alt="sun" loading="lazy" />
                       )}
                     </div>
                   </div>
@@ -124,17 +150,26 @@ export const Account = () => {
         </div>
 
         <div className="logout">
-          <img src="images/aside icons/logout.svg" alt="logout" />
+          <img
+            src="images/aside icons/logout.svg"
+            alt="logout"
+            loading="lazy"
+          />
           <span>Log Out</span>
         </div>
       </aside>
       <div className="main-details__container">
         <h1>Details Rental</h1>
-        <img src="images/details/map.jpg" alt="map" className="map" />
+        <img
+          src="images/details/map.png"
+          alt="map"
+          className="map"
+          loading="lazy"
+        />
         <div className="car-details__container">
           <div className="car-info__container">
             <div className="img__container">
-              <img src="images/details/car.png" alt="car" />
+              <img src="images/details/car.png" alt="car" loading="lazy" />
             </div>
             <div>
               <h1>Nissan GT-R</h1>
@@ -150,7 +185,7 @@ export const Account = () => {
           <div className="pickup__container">
             <div className="pickup__header">
               <div className="mark1">
-                <img src="images/details/Mark1.svg" alt="mark" />
+                <img src="images/details/Mark1.svg" alt="mark" loading="lazy" />
               </div>
               <span>Pick-Up</span>
             </div>
@@ -180,7 +215,7 @@ export const Account = () => {
           <div className="dropoff__container">
             <div className="dropoff-header">
               <div className="mark2">
-                <img src="images/details/Mark2.svg" alt="mark" />
+                <img src="images/details/Mark2.svg" alt="mark" loading="lazy" />
               </div>
               <span>Drop-Off</span>
             </div>
@@ -220,14 +255,14 @@ export const Account = () => {
       <div className="top-cars__container">
         <div className="header">
           <h1>Top 5 Car Rental</h1>
-          <img src="images/top/menu.svg" alt="" />
+          <img src="images/top/menu.svg" alt="" loading="lazy" />
         </div>
         <div className="content">
           <div className="content-left-col">
             <h3>72,030</h3>
             <h4>Rental Car</h4>
             <div className="ellipse__container">
-              <img src="/images/top/Chart.svg" alt="chart" />
+              <img src="/images/top/Chart.svg" alt="chart" loading="lazy" />
             </div>
           </div>
           <div className="content-right-col">
@@ -291,7 +326,7 @@ export const Account = () => {
         <div className="cars-content">
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car1.png" alt="" />
+              <img src="images/recent/car1.png" alt="" loading="lazy" />
               <div className="info__container">
                 <h3>Nissan GT-R Premium</h3>
                 <p>Sport Car</p>
@@ -304,7 +339,7 @@ export const Account = () => {
           </div>
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car2.png" alt="" />
+              <img src="images/recent/car2.png" alt="" loading="lazy" />
               <div className="info__container">
                 <h3>Nissan Z Sport</h3>
                 <p>Sport Car</p>
@@ -317,7 +352,7 @@ export const Account = () => {
           </div>
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car3.png" alt="" />
+              <img src="images/recent/car3.png" alt="" loading="lazy" />
               <div className="info__container">
                 <h3>Nissan Leaf SV</h3>
                 <p>Electric Car</p>
@@ -330,7 +365,7 @@ export const Account = () => {
           </div>
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car4.png" alt="" />
+              <img src="images/recent/car4.png" alt="" loading="lazy" />
               <div className="info__container">
                 <h3>Nissan Ariya Engage FWD</h3>
                 <p>Electric Car</p>

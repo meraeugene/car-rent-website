@@ -148,6 +148,7 @@ const Navbar = () => {
                 src={`/images/carrentlogo.png`}
                 alt="car rent logo"
                 style={{ width: "45px", height: "45px" }}
+                loading="lazy"
               />
             </Link>
           )}
@@ -171,6 +172,7 @@ const Navbar = () => {
               src={`/images/carrentlogo.png`}
               alt="car rent logo"
               style={{ width: "45px", height: "45px" }}
+              loading="lazy"
             />
           </Link>
 
@@ -214,7 +216,7 @@ const Navbar = () => {
                       key={car.id}
                       onClick={() => handleCarClick(car.name)}
                     >
-                      <img src={car.images.view1} alt="" />
+                      <img src={car.images.view1} alt="" loading="lazy" />
                       <h2>{car.name}</h2>
                     </Link>
                   ))}
@@ -225,7 +227,7 @@ const Navbar = () => {
             <div className="nav__menu">
               <Link to="/collection" className="icon ">
                 <div className="heart-container">
-                  <img src={`/images/heart.svg`} alt="heart" />
+                  <img src={`/images/heart.svg`} alt="heart" loading="lazy" />
                   {likedCarsCount > 0 && (
                     <div className="likedCarsCounter">{likedCarsCount}</div>
                   )}
@@ -233,17 +235,29 @@ const Navbar = () => {
               </Link>
               <Link to="/notifications" className="icon">
                 <div className="icon-container">
-                  <img src={`/images/notification.svg`} alt="notif" />
+                  <img
+                    src={`/images/notification.svg`}
+                    alt="notif"
+                    loading="lazy"
+                  />
                 </div>
               </Link>
               <Link to="/settings" className="icon">
                 <div className="icon-container">
-                  <img src={`/images/setting-2.svg`} alt="settings" />
+                  <img
+                    src={`/images/setting-2.svg`}
+                    alt="settings"
+                    loading="lazy"
+                  />
                 </div>
               </Link>
               <Link to="/account" className="icon">
                 <div className="icon-container">
-                  <img src={`/images/profile.png`} alt="profile" />
+                  <img
+                    src={`/images/profile.png`}
+                    alt="profile"
+                    loading="lazy"
+                  />
                 </div>
               </Link>
             </div>
@@ -252,6 +266,7 @@ const Navbar = () => {
               <img
                 src={`/images/profile.png`}
                 alt="profile"
+                loading="lazy"
                 onClick={() => setOpenProfile((prev) => !prev)}
               />
               {openProfile && (
@@ -264,7 +279,11 @@ const Navbar = () => {
                     >
                       Collection
                       <div className="heart-container">
-                        <img src={`/images/heart.svg`} alt="heart" />
+                        <img
+                          src={`/images/heart.svg`}
+                          alt="heart"
+                          loading="lazy"
+                        />
                         {likedCarsCount > 0 && (
                           <div className="likedCarsCounter">
                             {likedCarsCount}
@@ -279,7 +298,11 @@ const Navbar = () => {
                     >
                       Settings
                       <div className="icon-container">
-                        <img src={`/images/setting-2.svg`} alt="settings" />
+                        <img
+                          src={`/images/setting-2.svg`}
+                          alt="settings"
+                          loading="lazy"
+                        />
                       </div>
                     </Link>
                     <Link
@@ -289,7 +312,11 @@ const Navbar = () => {
                     >
                       Notification
                       <div className="icon-container">
-                        <img src={`/images/notification.svg`} alt="notif" />
+                        <img
+                          src={`/images/notification.svg`}
+                          alt="notif"
+                          loading="lazy"
+                        />
                       </div>
                     </Link>
 

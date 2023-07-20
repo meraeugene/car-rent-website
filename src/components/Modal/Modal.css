@@ -6,7 +6,6 @@ body.active-modal {
 
 .modal,
 .overlay {
-  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
@@ -87,4 +86,17 @@ body.active-modal {
   width: 40px;
   height: 40px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 375px) {
+  .modal-content {
+    max-width: 300px;
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal-content {
+    max-width: 280px;
+  }
 }

@@ -22,6 +22,7 @@ const Footer = () => {
               src={`/images/carrentlogo.png`}
               alt="car rent logo"
               style={{ width: "70px", height: "70px", objectFit: "cover" }}
+              loading="lazy"
             />
           </div>
           <p>
