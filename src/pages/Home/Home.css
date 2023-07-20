@@ -1,0 +1,39 @@
+.container {
+  background: var(--color-bg);
+  padding: 2rem 4rem;
+}
+
+.flex__container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pickup-dropoff__container {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .flex__container {
+    flex-direction: column;
+  }
+
+  .pickup-dropoff__container {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .container {
+    padding: 2em 4em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 1.5em;
+  }
+}

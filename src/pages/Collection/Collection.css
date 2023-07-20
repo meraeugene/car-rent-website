@@ -1,0 +1,29 @@
+.likedPopularCars-Container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  padding-bottom: 1rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .likedPopularCars-Container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .likedPopularCars-Container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .likedPopularCars-Container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Source+Sans+3:wght@700&display=swap");
+
+:root {
+  --font-oswold: "Oswald", sans-serif;
+  --font-source: "Source Sans 3", sans-serif;
+  --w200: 200;
+  --w400: 400;
+  --w600: 600;
+  --bg-blue: #4668ce;
+  --bg-hover-lightblue: #0040ff;
+  --bg-blue-mediumblue: #54a6ff;
+  --bg-blue-offblue: #3563e9;
+  --offwhite: #f6f7f9;
+  --offwhite-text: #90a3bf;
+  --white: #fff;
+  --p-color: #596780;
+  --h2-color: #1a202c;
+  --bg-darkbutton: #2b2b2b;
+  --red: #ff0000;
+  --bg-modal: rgba(49, 49, 49, 0.8);
+  --text-color: #000000;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --color-select: #90a3bf;
+  --border-color: rgba(195, 212, 233, 0.4);
+  --color-bg: #f6f7f9;
+  --static-white: #fff;
+  --card-bg: #ffffff;
+}
+
+.darkmode {
+  --card-bg: #303030;
+  --bg-blue-offblue: #1d3e7e;
+  --bg-blue-mediumblue: #0f4c91;
+  --static-white: #fff;
+  --offwhite: #303030;
+  --color-bg: #18191a;
+  --color-select: #18191a;
+  --offwhite-text: #ffffff;
+  --white: #18191a;
+  --h2-color: #ffffff;
+  --p-color: #ffffff;
+  --text-color: #ffffff;
+  --box-shadow: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(195, 212, 233, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.rentnowBtn {
+  width: 116px;
+  height: 44px;
+  padding: 0px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background: var(--bg-blue);
+  font-family: var(--font-oswold);
+  color: var(--static-white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.7px;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.rentnowBtn:hover {
+  background: var(--bg-hover-lightblue);
+}
+
+.offwhite {
+  color: var(--offwhite);
+  font-size: 1rem;
+}
+
+.offwhite-text {
+  color: var(--offwhite-text);
+}
+
+.section__padding {
+  padding: 2rem 4rem;
+  background: var(--color-bg);
+  font-family: var(--font-oswold);
+}
+
+.section__font {
+  font-family: var(--font-oswold);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.flex-between {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.flex-normal {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.flex-nogap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-hover-lightblue);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.logo-aside {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .section__padding {
+    padding: 2em 4em;
+  }
+
+  .logo-aside {
+    display: block;
+  }
+
+  .flex-normal {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .rentnowBtn {
+    width: 100px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .section__padding {
+    padding: 1.5em;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+  }
+}

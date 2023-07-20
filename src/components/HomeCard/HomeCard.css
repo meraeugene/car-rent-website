@@ -1,0 +1,125 @@
+.best {
+  background: var(--bg-blue-mediumblue);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+}
+
+.easy {
+  background: var(--bg-blue-offblue);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+}
+
+.best h1,
+.easy h1 {
+  font-size: 3rem;
+  color: var(--static-white);
+  font-family: var(--font-oswold);
+  line-height: 110%;
+  letter-spacing: -0.96px;
+  font-weight: var(--w400);
+  max-width: 350px;
+  width: 100%;
+  margin-bottom: 0.3em;
+}
+
+.best p,
+.easy p {
+  max-width: 300px;
+  width: 100%;
+  font-family: var(--font-oswold);
+  font-weight: var(--w200);
+  line-height: 150%;
+  letter-spacing: -0.32px;
+  color: var(--static-white);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.best button {
+  width: 120px;
+  height: 44px;
+  padding: 0px 20px;
+  border-radius: 4px;
+  background-color: var(--bg-blue-offblue);
+  color: var(--static-white);
+  outline: none;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  font-family: var(--font-oswold);
+  font-weight: var(--w400);
+  line-height: 150%;
+  margin-bottom: 1rem;
+}
+
+.easy button {
+  width: 120px;
+  height: 44px;
+  padding: 0px 20px;
+  border-radius: 4px;
+  background-color: var(--bg-blue-offblue);
+  color: var(--static-white);
+  outline: none;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  font-family: var(--font-oswold);
+  font-weight: var(--w400);
+  line-height: 150%;
+  margin-bottom: 1rem;
+}
+
+.best-img,
+.easy-img {
+  position: absolute;
+  right: 3%;
+  bottom: 10%;
+}
+
+.best-img img {
+  width: 406px;
+  height: 116px;
+  object-fit: cover;
+}
+
+.easy-img img {
+  width: 406px;
+  height: 116px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 425px) {
+  .best h1,
+  .easy h1 {
+    font-size: 2rem;
+    max-width: 250px;
+  }
+
+  .best,
+  .easy {
+    padding: 1rem;
+  }
+
+  .best p,
+  .easy p {
+    font-size: 1rem;
+  }
+
+  .best-img img,
+  .easy-img img {
+    width: 230px;
+    height: 100px;
+  }
+
+  .best-img,
+  .easy-img {
+    bottom: 2%;
+  }
+}

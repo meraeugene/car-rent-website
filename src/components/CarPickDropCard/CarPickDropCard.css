@@ -1,0 +1,92 @@
+.pickdrop__container {
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+  color: var(--text-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.pickdrop__container-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5em;
+}
+
+.pickdrop__container-header-img {
+  border-radius: 50%;
+  width: 20px;
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(53, 99, 233, 0.3);
+}
+
+.pickdrop__container-header span {
+  font-size: 16px;
+  font-family: var(--font-oswold);
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+.pickdrop__container-body-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+.location,
+.date {
+  position: relative;
+  width: 100%;
+}
+
+.time {
+  width: 100%;
+}
+
+.location h3,
+.date h3,
+.time h3 {
+  font-size: 16px;
+  font-family: var(--font-oswold);
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+.location select,
+.date input,
+.time input {
+  color: var(--color-select);
+  outline: none;
+  font-size: 12px;
+  font-family: var(--font-oswold);
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  border: 1px solid var(--offwhite-text);
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.location option {
+  background-color: var(--white);
+  color: var(--offwhite-text);
+}
+
+@media screen and (max-width: 767px) {
+  .pickdrop__container-body-flex {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .pickdrop__container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,52 @@
+/* recommend */
+
+.recommend-car__container {
+  grid-area: recommend;
+  width: 100%;
+  margin: 2em 0;
+  margin-top: 0;
+  font-family: var(--font-oswold);
+}
+
+.recommend-car__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  color: var(--text-color);
+}
+
+.recommend-car__header h4 {
+  color: #54a6ff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+.recommend-car-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .recommend-car-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recommend-car-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .recommend-car-content {
+    grid-template-columns: 1fr;
+  }
+}

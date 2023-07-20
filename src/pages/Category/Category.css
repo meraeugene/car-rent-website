@@ -1,0 +1,209 @@
+.category-grid__container {
+  display: grid;
+  grid-template-areas: "aside category-main";
+}
+
+.category-grid__container aside {
+  background-color: var(--card-bg);
+  font-family: var(--font-oswold);
+  color: var(--text-color);
+  grid-area: aside;
+  padding: 1em;
+}
+
+.check-box label {
+  font-size: 1.1rem;
+}
+
+.catgory-main__container {
+  grid-area: category-main;
+}
+
+.type__container h2,
+.capacity__container h2 {
+  color: var(--p-color);
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+
+.capacity__container {
+  margin-top: 2em;
+}
+
+.type__container .check-box,
+.capacity__container .check-box {
+  margin-top: 0.7em;
+}
+
+.type__container .check-box input,
+.capacity__container .check-box input {
+  margin-right: 0.5em;
+}
+
+.category-pickdrop__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 4em;
+  gap: 2em;
+  background: var(--color-bg);
+}
+
+.category-pickdrop__container .pickdrop__container {
+  padding: 1em;
+  padding-bottom: 1.5em;
+  width: 100%;
+}
+
+.cards-grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 2em 4em;
+  background: var(--color-bg);
+  padding-bottom: 0;
+}
+
+.button {
+  display: flex;
+  padding: 2em 0;
+  position: relative;
+  width: 100%;
+  background: var(--color-bg);
+}
+
+.button span {
+  position: absolute;
+  right: 5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-oswold);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+  letter-spacing: -0.28px;
+}
+
+.no-cars-message {
+  font-family: var(--font-oswold);
+  text-align: center;
+  background: var(--color-bg);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button {
+  width: 156px;
+  font-family: var(--font-oswold);
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: var(--static-white);
+  background: var(--bg-blue);
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background-color: var(--bg-hover-lightblue);
+}
+
+.no-cars-message h1 {
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .category-grid__container {
+    grid-template-areas:
+      "aside"
+      "category-main";
+  }
+
+  .category-grid__container aside {
+    grid-area: unset;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    width: 230px;
+    z-index: 100;
+    padding: 1.5em;
+    display: none;
+  }
+
+  .category-grid__container aside form {
+    margin-top: 0.7em;
+  }
+
+  .filter__aside.filter__aside-show {
+    display: block;
+  }
+
+  .category__container {
+    flex-direction: column;
+  }
+
+  .category__container aside {
+    background-color: var(--card-bg);
+  }
+
+  .category-pickdrop__container {
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em 4em;
+  }
+
+  .button span {
+    right: 5em;
+  }
+
+  .button {
+    padding-top: 0;
+  }
+
+  .cards-grid__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 2em 4em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards-grid__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 2em 4em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cards-grid__container {
+    grid-template-columns: 1fr;
+    padding: 1.5em;
+  }
+
+  .category-pickdrop__container {
+    padding: 1.5em;
+  }
+
+  .button span {
+    right: 2em;
+    top: 45%;
+  }
+
+  .button button {
+    width: 120px;
+    height: 36px;
+  }
+
+  .category-grid__container aside {
+    width: 190px;
+  }
+}

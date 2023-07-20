@@ -1,0 +1,135 @@
+/* reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.reviews__container {
+  font-family: var(--font-oswold);
+  margin: 2em 0;
+}
+
+.reviews-content__body {
+  background-color: var(--card-bg);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.reviews-content__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 2em;
+  color: var(--text-color);
+}
+
+.reviews-content__header span {
+  border-radius: 4px;
+  background: var(--bg-blue-offblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 28px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--static-white);
+}
+
+.reviews-content-profile {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.reviews-content-profile img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.reviews-content-desc h2 {
+  color: var(--h2-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.6px;
+}
+
+.reviews-content-desc h4 {
+  color: var(--offwhite-text);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.28px;
+  margin: 0.2em 0;
+}
+
+.reviews-content-desc p {
+  color: var(--p-color);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  letter-spacing: -0.28px;
+}
+
+.reviews-content-stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0 0.3em 0;
+}
+
+.reviews-content-stars h4 {
+  text-align: right;
+  margin-bottom: 0.2em;
+  color: var(--offwhite-text);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.28px;
+}
+
+.reviews-content__footer {
+  margin-top: 2em;
+}
+
+.reviews-content__footer h3 {
+  color: var(--offwhite-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .reviews-content__body {
+    padding: 1em;
+    height: 100%;
+  }
+
+  .reviews-content-desc h2 {
+    font-size: 1rem;
+  }
+
+  .reviews-content-desc p {
+    font-size: 0.8rem;
+  }
+
+  .reviews-content-desc h4 {
+    font-size: 0.8rem;
+  }
+}

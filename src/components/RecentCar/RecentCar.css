@@ -1,0 +1,52 @@
+/* recent */
+
+.recent-car__container {
+  grid-area: recent;
+  width: 100%;
+  margin: 2em 0;
+  margin-top: 2.7em;
+  font-family: var(--font-oswold);
+}
+
+.recent-car__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  color: var(--text-color);
+}
+
+.recent-car__header h4 {
+  color: #54a6ff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+.recent-cars-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .recent-cars-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recent-cars-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .recent-cars-content {
+    grid-template-columns: 1fr;
+  }
+}

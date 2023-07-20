@@ -1,0 +1,194 @@
+[
+  {
+    "id": "NISZ1",
+    "section": "popular",
+    "name": "Nissan Z Sport",
+    "images": {
+      "view1": "/images/popularcars/nissansport/nissanzsport.png",
+      "view2": "/images/popularcars/nissansport/view2.png",
+      "view3": "/images/popularcars/nissansport/view3.png"
+    },
+    "description": "Sport",
+    "gas": "90L",
+    "drive_mode": "Automatic",
+    "people": 2,
+    "price": 99,
+    "original_price": ""
+  },
+  {
+    "id": "NISG2",
+    "section": "popular",
+    "name": "Nissan GT-R Premium",
+    "images": {
+      "view1": "/images/popularcars/nissangtr/nissangtrprem.png",
+      "view2": "/images/popularcars/nissangtr/view2.png",
+      "view3": "/images/popularcars/nissangtr/view3.png"
+    },
+    "description": "Sport",
+    "gas": "80L",
+    "drive_mode": "Manual",
+    "people": 2,
+    "price": 80,
+    "original_price": 100
+  },
+  {
+    "id": "NISL3",
+    "section": "popular",
+    "name": "Nissan Leaf SV",
+    "images": {
+      "view1": "/images/popularcars/nissanleaf/nissanleaf.png",
+      "view2": "/images/popularcars/nissanleaf/view2.png",
+      "view3": "/images/popularcars/nissanleaf/view3.png"
+    },
+    "description": "Electric",
+    "gas": "Electric",
+    "drive_mode": "Automatic",
+    "people": 4,
+    "price": 96,
+    "original_price": ""
+  },
+  {
+    "id": "NISA4",
+    "section": "popular",
+    "name": "Nissan Ariya Engage FWD",
+    "images": {
+      "view1": "/images/popularcars/nissanariya/nissanariya.png",
+      "view2": "/images/popularcars/nissanariya/view2.png",
+      "view3": "/images/popularcars/nissanariya/view3.png"
+    },
+    "description": "Electric",
+    "gas": "Electric",
+    "drive_mode": "Automatic",
+    "people": 4,
+    "price": 76,
+    "original_price": 80.0
+  },
+  {
+    "id": "NISR5",
+    "section": "recommend",
+    "name": "Nissan Rogue S FWD",
+    "images": {
+      "view1": "/images/recommendcars/rogue/nissanrogue.png",
+      "view2": "/images/recommendcars/rogue/view2.png",
+      "view3": "/images/recommendcars/rogue/view3.png"
+    },
+    "description": "SUV",
+    "gas": "70L",
+    "drive_mode": "Automatic",
+    "people": 5,
+    "price": 72,
+    "original_price": 80
+  },
+  {
+    "id": "NISV6",
+    "section": "recommend",
+    "name": "Nissan Versa",
+    "images": {
+      "view1": "/images/recommendcars/versa/nisanversa.png",
+      "view2": "/images/recommendcars/versa/view2.png",
+      "view3": "/images/recommendcars/versa/view3.png"
+    },
+    "description": "Sedan",
+    "gas": "80L",
+    "drive_mode": "Automatic",
+    "people": 5,
+    "price": 20,
+    "original_price": ""
+  },
+  {
+    "id": "NISK7",
+    "section": "recommend",
+    "name": "Nissan Kicks S",
+    "images": {
+      "view1": "/images/recommendcars/kicks/nissankicks.png",
+      "view2": "/images/recommendcars/kicks/view2.png",
+      "view3": "/images/recommendcars/kicks/view3.png"
+    },
+    "description": "SUV",
+    "gas": "90L",
+    "drive_mode": "Automatic",
+    "people": 5,
+    "price": 74,
+    "original_price": ""
+  },
+  {
+    "id": "NISA8",
+    "section": "recommend",
+    "name": "Nissan Armada SL",
+    "images": {
+      "view1": "/images/recommendcars/armada/armada.png",
+      "view2": "/images/recommendcars/armada/view2.png",
+      "view3": "/images/recommendcars/armada/view3.png"
+    },
+    "description": "SUV",
+    "gas": "90L",
+    "drive_mode": "Automatic",
+    "people": 8,
+    "price": 76,
+    "original_price": 80.0
+  },
+  {
+    "id": "NISS9",
+    "section": "recommend",
+    "name": "Nissan Sentra S MT",
+    "images": {
+      "view1": "/images/recommendcars/sentra/sentra.png",
+      "view2": "/images/recommendcars/sentra/view2.png",
+      "view3": "/images/recommendcars/sentra/view3.png"
+    },
+    "description": "Sedan",
+    "gas": "80L",
+    "drive_mode": "Manual",
+    "people": 5,
+    "price": 80,
+    "original_price": ""
+  },
+  {
+    "id": "NISM10",
+    "section": "recommend",
+    "name": "Nissan Murano  S",
+    "images": {
+      "view1": "/images/recommendcars/murano/murano.png",
+      "view2": "/images/recommendcars/murano/view2.png",
+      "view3": "/images/recommendcars/murano/view3.png"
+    },
+    "description": "SUV",
+    "gas": "90L",
+    "drive_mode": "Automatic",
+    "people": 5,
+    "price": 99,
+    "original_price": ""
+  },
+  {
+    "id": "NISF11",
+    "section": "recommend",
+    "name": "Nissan Frontier King Cab S",
+    "images": {
+      "view1": "/images/recommendcars/frontier/frontier.png",
+      "view2": "/images/recommendcars/frontier/view2.png",
+      "view3": "/images/recommendcars/frontier/view3.png"
+    },
+    "description": "Pickup",
+    "gas": "90L",
+    "drive_mode": "Manual",
+    "people": 4,
+    "price": 74,
+    "original_price": 80
+  },
+  {
+    "id": "NISQ12",
+    "section": "recommend",
+    "name": "Nissan Qashqai S FWD",
+    "images": {
+      "view1": "/images/recommendcars/qashqal/qashqal.png",
+      "view2": "/images/recommendcars/qashqal/view2.png",
+      "view3": "/images/recommendcars/qashqal/view3.png"
+    },
+    "description": "SUV",
+    "gas": "80L",
+    "drive_mode": "Manual",
+    "people": 5,
+    "price": 80,
+    "original_price": ""
+  }
+]

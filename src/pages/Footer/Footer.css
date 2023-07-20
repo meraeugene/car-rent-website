@@ -1,0 +1,127 @@
+.footer__container {
+  background-color: var(--white);
+  padding: 2rem 4rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.flex-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.logo-menu__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-description h1 {
+  color: var(--bg-hover-lightblue);
+  font-size: 32px;
+  font-family: var(--font-oswold);
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.96px;
+  margin-bottom: 0.5rem;
+}
+
+.company-description p {
+  font-size: 16px;
+  font-family: var(--font-oswold);
+  font-weight: 500;
+  line-height: 150%;
+  width: 210px;
+  letter-spacing: -0.32px;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about,
+.community,
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--font-source);
+  color: var(--p-color);
+}
+
+.about h2,
+.community h2,
+.socials h2 {
+  font-family: var(--font-oswold);
+  color: var(--h2-color);
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  margin-bottom: 0.5rem;
+}
+
+.about span,
+.community span,
+.socials span {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-oswold);
+  line-height: 150%;
+  letter-spacing: -0.32px;
+}
+
+.copyright-privacy__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(19, 19, 19, 0.16);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  font-family: var(--font-oswold);
+}
+
+.privacy {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__container {
+    padding: 2em 4em;
+  }
+
+  .footer-menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .logo-menu__container {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .company-description {
+    margin-bottom: 3em;
+  }
+
+  .footer__container {
+    padding: 1.5em;
+  }
+
+  .copyright-privacy__container {
+    margin-top: 2em;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    width: 100%;
+    line-height: 2em;
+  }
+}
