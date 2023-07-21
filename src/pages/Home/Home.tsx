@@ -4,6 +4,7 @@ import { CarPickDropCard } from "../../components/CarPickDropCard/CarPickDropCar
 import { HomeCard } from "../../components/HomeCard/HomeCard";
 import "./Home.css";
 import { DarkModeContext } from "../../context/DarkModeContext";
+import "animate.css";
 
 const Home = () => {
   // dark mode
@@ -25,7 +26,7 @@ const Home = () => {
             price."
             image="/images/best.png"
             button="Rental Car"
-            classNameContainer="best"
+            classNameContainer="best animate__animated animate__fadeInLeft"
             classNameInfo="best-info"
             classNameImage="best-img"
           />
@@ -35,7 +36,7 @@ const Home = () => {
               comfortable facilities."
             image="/images/easy.png"
             button="Rental Car"
-            classNameContainer="easy"
+            classNameContainer="easy animate__animated animate__fadeInRight"
             classNameInfo="easy-info"
             classNameImage="easy-img"
           />
@@ -47,6 +48,7 @@ const Home = () => {
             location="Locations"
             date="Date"
             time="Time"
+            aos="fade-right"
           />
 
           <CarPickDropCard
@@ -54,6 +56,7 @@ const Home = () => {
             location="Locations"
             date="Date"
             time="Time"
+            aos="fade-left"
           />
         </div>
       </div>

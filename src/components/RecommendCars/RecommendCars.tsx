@@ -9,7 +9,7 @@ recommendCars = recommendCars.slice(0, 4);
 
 const RecommendCars = () => {
   return (
-    <div className="recommend-car__container">
+    <div className="recommend-car__container" data-aos="fade-up">
       <div className="recommend-car__header">
         <span>Recommendation Car</span>
         <Link to="/category">

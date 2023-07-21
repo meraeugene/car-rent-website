@@ -5,11 +5,12 @@ type CarPickDropProps = {
   location: string;
   date: string;
   time: string;
+  aos: string;
 };
 
 export const CarPickDropCard = (props: CarPickDropProps) => {
   return (
-    <div className="pickdrop__container">
+    <div className="pickdrop__container" data-aos={props.aos}>
       <div className="pickdrop__container-header">
         <div className="pickdrop__container-header-img">
           <img src="/images/Ellipse 11.svg" alt="elipse" loading="lazy" />

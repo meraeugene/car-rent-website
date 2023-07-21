@@ -21,16 +21,18 @@ export const Collection = () => {
   return (
     <>
       <div className={`section__padding ${isActive ? "darkmode" : ""}`}>
-        <h1 className="title">Ride the Thrill: Your Personal Car Showcase!</h1>
+        {isEmpty ? (
+          <h1 className="title custom-padding">
+            Like cars to add them to your personal showcase.
+          </h1>
+        ) : (
+          <h1 className="title custom-message-margin">
+            Ride the Thrill: Your Personal Car Showcase!
+          </h1>
+        )}
 
         <div className="likedPopularCars-Container">
-          {isEmpty ? (
-            <h1 className="title" style={{ paddingBottom: "1em" }}>
-              Like cars to add them to your personal showcase.
-            </h1>
-          ) : (
-            <Card array={likedCars} />
-          )}
+          {isEmpty ? null : <Card array={likedCars} />}
         </div>
       </div>
       <Footer />

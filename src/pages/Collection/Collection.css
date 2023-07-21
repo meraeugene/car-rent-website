@@ -6,8 +6,15 @@
 }
 
 .title {
-  margin-bottom: 2rem;
   color: var(--text-color);
+}
+
+.custom-padding {
+  padding-bottom: 2.5em;
+}
+
+.custom-message-margin {
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 1024px) {

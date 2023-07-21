@@ -8,7 +8,7 @@ const recentCars = data.slice(0, 4);
 
 const RecentCar = () => {
   return (
-    <div className="recent-car__container">
+    <div className="recent-car__container" data-aos="fade-up">
       <div className="recent-car__header">
         <span>Recent Car</span>
         <Link to="/category">

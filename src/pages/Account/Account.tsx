@@ -114,7 +114,7 @@ export const Account = () => {
                     alt="briefcase"
                     loading="lazy"
                   />
-                  <span>Dark Mode</span>
+                  <span className="darkmodetxt">Dark Mode</span>
                 </div>
                 <div
                   className={`darkmodebtn ${isActive ? "active" : ""}`}

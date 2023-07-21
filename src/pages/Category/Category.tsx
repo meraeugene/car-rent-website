@@ -175,6 +175,7 @@ const Category = () => {
               location="Locations"
               date="Date"
               time="Time"
+              aos="fade-right"
             />
 
             <CarPickDropCard
@@ -182,6 +183,7 @@ const Category = () => {
               location="Locations"
               date="Date"
               time="Time"
+              aos="fade-left"
             />
           </div>
 

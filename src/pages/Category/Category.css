@@ -1,6 +1,7 @@
 .category-grid__container {
   display: grid;
   grid-template-areas: "aside category-main";
+  overflow-x: hidden;
 }
 
 .category-grid__container aside {
@@ -110,6 +111,7 @@
   color: var(--static-white);
   background: var(--bg-blue);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .button button:hover {

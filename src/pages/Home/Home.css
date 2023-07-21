@@ -1,6 +1,8 @@
 .container {
   background: var(--color-bg);
   padding: 2rem 4rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .flex__container {

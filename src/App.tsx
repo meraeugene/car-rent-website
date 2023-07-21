@@ -1,12 +1,22 @@
 import Navbar from "./components/Navbar/Navbar";
 import { LikedCarsProvider } from "./context/LikedCarContext";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Home, Collection, Notification, Settings, Account } from "./pages";
 import { CarDetails } from "./pages/CarDetails/CarDetails";
 import Payment from "./pages/Payment/Payment";
 import Category from "./pages/Category/Category";
+import { useEffect } from "react";
 
 const App = () => {
+  const location = useLocation(); // Get the current location from react-router-dom
+
+  // Scroll to the top whenever the route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  document.documentElement.style.setProperty("--animate-duration", ".7s");
+
   return (
     <div className="App">
       <LikedCarsProvider>

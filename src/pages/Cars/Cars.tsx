@@ -22,21 +22,23 @@ export const Cars = () => {
   return (
     <>
       <div className={`container ${isActive ? "darkmode" : ""}`}>
-        <div className="popular__header">
+        <div className="popular__header" data-aos="fade-up">
           <span>Popular Car</span>
           <Link to="/category">
             <span style={{ color: "#3563E9" }}>View All</span>
           </Link>
         </div>
 
-        <div className="popular__cards">
+        <div className="popular__cards" data-aos="fade-up">
           <Card array={popular} />
         </div>
       </div>
 
       <div className={`recommend__container ${isActive ? "darkmode" : ""}`}>
-        <div className="header">Recomendation Car</div>
-        <div className="content__cards">
+        <div className="header" data-aos="fade-up">
+          Recomendation Car
+        </div>
+        <div className="content__cards" data-aos="fade-up">
           <Card array={recommend} />
         </div>
       </div>

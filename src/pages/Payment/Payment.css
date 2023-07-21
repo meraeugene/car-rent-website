@@ -276,17 +276,15 @@ form .input-box select {
 }
 
 .paypal__container {
-  background-color: var(--offwhite);
   padding: 1em;
   margin: 1em 0;
   border-radius: 10px;
-  color: var(--text-color);
+  background-color: var(--static-white);
 }
 
 .bitcoin__container {
-  background-color: var(--offwhite);
+  background-color: var(--static-white);
   padding: 1em;
-  color: var(--text-color);
   border-radius: 10px;
 }
 

@@ -80,7 +80,7 @@ export const CarDetails = () => {
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
-            className="mySwiper"
+            className="mySwiper animate__animated animate__fadeInLeft"
           >
             <SwiperSlide>
               <img
@@ -107,7 +107,7 @@ export const CarDetails = () => {
             </SwiperSlide>
           </Swiper>
 
-          <div className="car-context">
+          <div className="car-context animate__animated animate__fadeInRight">
             <div className="car-context__header">
               <h1>{cardData.name}</h1>
               <div className="car-context__header-flex">
@@ -174,7 +174,11 @@ export const CarDetails = () => {
           </div>
         </div>
 
-        <div className="reviews__container ">
+        <div
+          className="reviews__container "
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           <div className="reviews-content__header">
             <h3>Reviews</h3>
             <span>5+</span>

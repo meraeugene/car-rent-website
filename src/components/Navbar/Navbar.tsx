@@ -111,7 +111,13 @@ const Navbar = () => {
   // Function to toggle the dashboard__aside-show class on click
   const handleMenuButtonClick = () => {
     const dashboardAside = document.querySelector(".dashboard__aside");
+
     dashboardAside?.classList.toggle("dashboard__aside-show");
+
+    // Check if the profile menu is open, and close it if needed
+    if (openProfile) {
+      setOpenProfile(false);
+    }
   };
 
   const handleMenuButtonFilterClick = () => {
@@ -254,9 +260,15 @@ const Navbar = () => {
               <Link to="/account" className="icon">
                 <div className="icon-container">
                   <img
-                    src={`/images/profile.png`}
+                    src={`/images/profile.jpg`}
                     alt="profile"
                     loading="lazy"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      objectFit: "cover",
+                      borderRadius: "50%",
+                    }}
                   />
                 </div>
               </Link>
@@ -264,7 +276,13 @@ const Navbar = () => {
 
             <div className="profile-mobile">
               <img
-                src={`/images/profile.png`}
+                src={`/images/profile.jpg`}
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                }}
                 alt="profile"
                 loading="lazy"
                 onClick={() => setOpenProfile((prev) => !prev)}
