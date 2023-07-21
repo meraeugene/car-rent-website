@@ -26,7 +26,7 @@ const Navbar = () => {
   const [showResults, setShowResults] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const searchBarRef = useRef<HTMLFormElement | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const filterButtonRef = useRef<HTMLDivElement>(null);
   const [openProfile, setOpenProfile] = useState(false);
 
   // useEffect to update likedCarsCount when likedCarsContent changes
@@ -48,22 +48,6 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleDocumentClick);
     };
   }, [likedCarsContent?.likedCars]);
-
-  // useEffect to handle window resize and check for mobile view
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    // Initial check for mobile
-    handleWindowResize();
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
 
   // Function to handle input change in the search bar
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -89,8 +73,12 @@ const Navbar = () => {
   // Function to toggle show/hide the search bar on mobile and update isSearchActive
   const toggleSearch = () => {
     const searchBar = searchBarRef.current;
+    const filterButton = filterButtonRef.current;
+
     searchBar?.classList.toggle("show-search");
     setIsSearchActive(!isSearchActive);
+
+    filterButton?.classList.toggle("showfilterbtn");
   };
 
   const handleLinkClick = () => {
@@ -99,8 +87,9 @@ const Navbar = () => {
 
   // Function to clear the search input and close the results
   const clearSearchInput = () => {
-    const searchInput =
-      searchBarRef.current?.querySelector('input[type="text"]');
+    const searchInput = searchBarRef.current?.querySelector(
+      'input[type="search"]'
+    );
     if (searchInput instanceof HTMLInputElement) {
       searchInput.value = "";
       setQuery("");
@@ -184,13 +173,9 @@ const Navbar = () => {
 
           <div className="nav-right">
             <div className="nav__search" ref={searchRef}>
-              <form
-                action=""
-                className={`search ${isMobile ? "" : "show-search"}`}
-                ref={searchBarRef}
-              >
+              <form action="" className="search" ref={searchBarRef}>
                 <input
-                  type="text"
+                  type="search"
                   placeholder="Search"
                   className="search__input"
                   value={query}
@@ -204,7 +189,7 @@ const Navbar = () => {
                   ></i>
                 </div>
                 <Link to="/category">
-                  <div className="filter__button">
+                  <div className="filter__button" ref={filterButtonRef}>
                     <i className="ri-equalizer-line search__filter"></i>
                   </div>
                 </Link>

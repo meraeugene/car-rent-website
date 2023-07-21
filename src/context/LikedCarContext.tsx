@@ -1,5 +1,5 @@
 // Importing necessary dependencies from React
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode, useEffect } from "react"; // Import useEffect
 
 // Defining the type for the Car object
 type Car = {
@@ -27,7 +27,9 @@ type LikedCarsProviderProps = {
 type LikedCarsContextType = {
   likedCars: Car[]; // Array of Car objects representing the liked cars
   addLikedCar: (car: Car) => void; // Function to add a car to the likedCars list
-  removeLikedCar: (carId: string) => void; // Function to remove a car from the likedCars list by car ID
+  removeLikedCar: (carId: string) => void; // Function to remove car from likedCars list by car ID
+  openTooltipId: string | null; // New state for openTooltipId
+  setOpenTooltipId: (id: string | null) => void; // New function to set openTooltipId
 };
 
 // Creating the LikedCarsContext with an initial value of null
@@ -39,6 +41,7 @@ export const LikedCarsContext = createContext<LikedCarsContextType | null>(
 export const LikedCarsProvider = ({ children }: LikedCarsProviderProps) => {
   // State to store the list of liked cars, initialized to an empty array by default
   const [likedCars, setLikedCars] = useState<Car[]>([]);
+  const [openTooltipId, setOpenTooltipId] = useState<string | null>(null); // Initialize openTooltipId
 
   // Function to add a car to the list of liked cars
   const addLikedCar = (car: Car) => {
@@ -57,7 +60,18 @@ export const LikedCarsProvider = ({ children }: LikedCarsProviderProps) => {
     likedCars,
     addLikedCar,
     removeLikedCar,
+    openTooltipId, // Include openTooltipId in the context value
+    setOpenTooltipId, // Include setOpenTooltipId in the context value
   };
+
+  useEffect(() => {
+    // Clear the timeout when the component is unmounted
+    return () => {
+      if (openTooltipId !== null) {
+        setOpenTooltipId(null);
+      }
+    };
+  }, [openTooltipId]);
 
   // Wrapping the children with the LikedCarsContext and providing the likedCarsContextValue
   return (

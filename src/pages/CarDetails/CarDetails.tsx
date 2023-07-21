@@ -5,7 +5,7 @@ import Reviews from "../../components/Reviews/Reviews";
 import RecentCar from "../../components/RecentCar/RecentCar";
 import RecommendCars from "../../components/RecommendCars/RecommendCars";
 import { Footer } from "..";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,7 +15,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
 import { DarkModeContext } from "../../context/DarkModeContext";
 
 // Define the CarData type
@@ -65,6 +66,20 @@ export const CarDetails = () => {
   // Extract the isActive property from the context
   const { isActive } = darkModeContext;
 
+  const progressCircle = useRef<SVGSVGElement>(null);
+  const progressContent = useRef<HTMLDivElement>(null);
+
+  const onAutoplayTimeLeft = (_: any, time: number, progress: number) => {
+    // Check if the refs are not null before accessing their properties
+    if (progressCircle.current && progressContent.current) {
+      progressCircle.current.style.setProperty(
+        "--progress",
+        String(1 - progress)
+      );
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  };
+
   return (
     <>
       <div
@@ -72,15 +87,20 @@ export const CarDetails = () => {
       >
         <div className="flex-normal">
           <Swiper
+            centeredSlides={true}
+            autoplay={{
+              delay: 6666.64,
+              disableOnInteraction: false,
+            }}
             slidesPerView={1}
             spaceBetween={30}
             loop={true}
             pagination={{
               clickable: true,
             }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper animate__animated animate__fadeInLeft"
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper"
           >
             <SwiperSlide>
               <img
@@ -105,6 +125,12 @@ export const CarDetails = () => {
                 loading="lazy"
               />
             </SwiperSlide>
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span ref={progressContent}></span>
+            </div>
           </Swiper>
 
           <div className="car-context animate__animated animate__fadeInRight">

@@ -5,6 +5,8 @@ import "./Card.css";
 import { LikedCarsContext } from "../../context/LikedCarContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Tooltip from "@mui/material/Tooltip";
+import Zoom from "@mui/material/Zoom";
 
 // Define the type for the props received by the Card component
 type CardProps = {
@@ -25,31 +27,43 @@ type CardProps = {
   }[];
 };
 
-// Card component
 export const Card = ({ array }: CardProps) => {
-  // Access the LikedCarsContext using useContext
   const likedCarsContent = useContext(LikedCarsContext);
 
-  // If the likedCarsContent is not available, return null
   if (!likedCarsContent) {
     return null;
   }
 
-  // Destructure the likedCars and functions addLikedCar and removeLikedCar from likedCarsContent
-  const { likedCars, addLikedCar, removeLikedCar } = likedCarsContent;
+  const {
+    likedCars,
+    addLikedCar,
+    removeLikedCar,
+    openTooltipId,
+    setOpenTooltipId,
+  } = likedCarsContent;
+
+  const handleTooltipClose = () => {
+    setOpenTooltipId(null);
+  };
 
   return (
     <>
       {array.map((card) => {
-        // Check if the current card is liked by the user
         const isLiked = likedCars.some((car) => car.id === card.id);
 
-        // Function to toggle like status for a card
         const toggleLike = () => {
           if (isLiked) {
-            removeLikedCar(card.id); // Remove the card from likedCars if already liked
+            removeLikedCar(card.id);
+            setOpenTooltipId(card.id); // Set the tooltip to "Remove from collection" after removing the car
+            setTimeout(() => {
+              setOpenTooltipId(null);
+            }, 500);
           } else {
-            addLikedCar(card); // Add the card to likedCars if not already liked
+            addLikedCar(card);
+            setOpenTooltipId(card.id); // Set the tooltip to "Added to collection" after adding the car
+            setTimeout(() => {
+              setOpenTooltipId(null);
+            }, 500);
           }
         };
 
@@ -65,22 +79,38 @@ export const Card = ({ array }: CardProps) => {
             <div className="card__header">
               <div className="card__header-flex">
                 <h3>{card.name}</h3>
-                <button
-                  type="button"
-                  style={{
-                    border: "none",
-                    outline: "none",
-                    background: "transparent",
-                    cursor: "pointer",
+                <Tooltip
+                  TransitionComponent={Zoom}
+                  placement="left"
+                  PopperProps={{
+                    disablePortal: true,
                   }}
-                  onClick={toggleLike}
+                  onClose={handleTooltipClose} // Call handleTooltipClose when the tooltip is manually closed
+                  open={openTooltipId === card.id}
+                  disableFocusListener
+                  disableHoverListener
+                  disableTouchListener
+                  title={
+                    isLiked ? "Added to collection" : "Remove from collection"
+                  }
                 >
-                  {isLiked ? (
-                    <img src="/images/Like Red.svg" alt="" loading="lazy" />
-                  ) : (
-                    <img src="/images/Like.svg" alt="" loading="lazy" />
-                  )}
-                </button>
+                  <button
+                    type="button"
+                    style={{
+                      border: "none",
+                      outline: "none",
+                      background: "transparent",
+                      cursor: "pointer",
+                    }}
+                    onClick={toggleLike}
+                  >
+                    {isLiked ? (
+                      <img src="/images/Like Red.svg" alt="" loading="lazy" />
+                    ) : (
+                      <img src="/images/Like.svg" alt="" loading="lazy" />
+                    )}
+                  </button>
+                </Tooltip>
               </div>
               <span className="offwhite-text">{card.description}</span>
             </div>
