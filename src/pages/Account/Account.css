@@ -260,11 +260,14 @@
   margin-right: 0.5em;
 }
 
+.top-cars__container .header {
+  margin-bottom: 2em;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3em;
 }
 
 .header h1 {
@@ -349,6 +352,7 @@
   padding: 1rem;
   width: 100%;
   color: var(--text-color);
+  margin-top: 1em;
 }
 
 .car-info img {

@@ -142,7 +142,7 @@ const Navbar = () => {
               <img
                 src={`/images/carrentlogo.png`}
                 alt="car rent logo"
-                style={{ width: "45px", height: "45px" }}
+                style={{ width: "40px", height: "40px" }}
                 loading="lazy"
               />
             </Link>
@@ -166,7 +166,7 @@ const Navbar = () => {
             <img
               src={`/images/carrentlogo.png`}
               alt="car rent logo"
-              style={{ width: "45px", height: "45px" }}
+              style={{ width: "40px", height: "100%" }}
               loading="lazy"
             />
           </Link>

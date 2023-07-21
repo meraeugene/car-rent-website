@@ -1,13 +1,12 @@
 .card__container {
-  border-radius: 10px;
   font-family: var(--font-oswold);
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
   background-color: var(--card-bg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
 .card__header-flex {
@@ -79,12 +78,6 @@
   color: var(--h2-color);
 }
 
-@media screen and (max-width: 768px) {
-  .card__container {
-    max-width: 300px;
-  }
-}
-
 @media screen and (max-width: 425px) {
   .col h3 {
     font-size: 1rem;
@@ -92,7 +85,6 @@
 
   .card__container {
     padding: 1em;
-    max-width: 100%;
     width: 100%;
   }
 }

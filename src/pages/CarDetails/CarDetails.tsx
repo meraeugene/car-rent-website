@@ -100,7 +100,7 @@ export const CarDetails = () => {
             }}
             modules={[Autoplay, Pagination, Navigation]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
-            className="mySwiper"
+            className="mySwiper animate__animated animate__fadeInLeft"
           >
             <SwiperSlide>
               <img

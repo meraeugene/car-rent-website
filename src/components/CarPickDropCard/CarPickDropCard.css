@@ -2,7 +2,7 @@
   background-color: var(--card-bg);
   padding: 1rem 2rem;
   padding-bottom: 2rem;
-  border-radius: 10px;
+  border-radius: 8px;
   color: var(--text-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
