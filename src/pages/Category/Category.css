@@ -178,7 +178,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .cards-grid__container {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;

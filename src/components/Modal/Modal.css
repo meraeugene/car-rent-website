@@ -88,7 +88,7 @@ body.active-modal {
   object-fit: cover;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .modal-content {
     max-width: 300px;
     padding: 1em;

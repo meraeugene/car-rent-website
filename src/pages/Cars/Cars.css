@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .popular__cards,
   .content__cards {
     grid-template-columns: repeat(2, 1fr);

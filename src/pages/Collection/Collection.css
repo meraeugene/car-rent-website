@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .likedPopularCars-Container {
     grid-template-columns: repeat(2, 1fr);
   }
