@@ -74,7 +74,7 @@
 
 .likedCarsCounter {
   background-color: #54a6ff;
-  color: var(--white);
+  color: var(--static-white);
   position: absolute;
   font-size: 0.8rem;
   right: -8px;

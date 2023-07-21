@@ -52,6 +52,13 @@
   user-select: none;
 }
 
+input[type="text"],
+input[type="search"],
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .rentnowBtn {
   width: 116px;
   height: 44px;

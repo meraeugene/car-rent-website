@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Tooltip from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 // Define the type for the props received by the Card component
 type CardProps = {
@@ -45,6 +46,16 @@ export const Card = ({ array }: CardProps) => {
   const handleTooltipClose = () => {
     setOpenTooltipId(null);
   };
+
+  // dark mode
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    // Handle the case where the context is undefined
+    return null;
+  }
+
+  const { isActive } = darkModeContext;
 
   return (
     <>
@@ -107,12 +118,18 @@ export const Card = ({ array }: CardProps) => {
                     {isLiked ? (
                       <i
                         className="ri-heart-fill"
-                        style={{ fontSize: "1.5rem", color: "red" }}
+                        style={{
+                          fontSize: "1.5rem",
+                          color: "red",
+                        }}
                       ></i>
                     ) : (
                       <i
                         className="ri-heart-line"
-                        style={{ fontSize: "1.5rem" }}
+                        style={{
+                          fontSize: "1.5rem",
+                          color: isActive ? "#fff" : "",
+                        }}
                       ></i>
                     )}
                   </button>

@@ -347,12 +347,6 @@
   margin-top: 1em;
 }
 
-.car-info img {
-  width: 180px;
-  height: 100px;
-  object-fit: contain;
-}
-
 .recent-transaction__container .header span {
   color: var(--bg-hover-lightblue);
   cursor: pointer;
@@ -486,12 +480,6 @@
 @media screen and (max-width: 425px) {
   .preference__container {
     margin-top: 1em;
-  }
-
-  .car-info img {
-    width: 76px;
-    height: 44px;
-    object-fit: contain;
   }
 
   .main-menu__container {

@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
+type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
+
 type BlurHashImageProps = {
   src: string;
   className?: string;
   hash: string;
   height?: number;
   width?: number;
+  objectFit?: ObjectFit;
 };
 
 const BlurHashImage = (props: BlurHashImageProps): JSX.Element => {
@@ -21,8 +24,9 @@ const BlurHashImage = (props: BlurHashImageProps): JSX.Element => {
     img.src = props.src;
   }, [props.src]);
 
-  const height = props.height || 200;
   const width = props.width || "100%";
+  const height = props.height || 200;
+  const objectFit = props.objectFit || "cover";
 
   return (
     <>
@@ -42,7 +46,7 @@ const BlurHashImage = (props: BlurHashImageProps): JSX.Element => {
         alt=""
         style={{
           display: !imageLoaded ? "none" : "inline",
-          objectFit: "cover",
+          objectFit: objectFit,
           height: height,
           width: width,
         }}

@@ -160,14 +160,14 @@ export const Account = () => {
         </div>
       </aside>
       <div className="main-details__container">
-        <h1>Details Rental</h1>
+        <h1 style={{ marginBottom: ".5em" }}>Details Rental</h1>
         <BlurHashImage
           src="images/details/map.png"
           className="map"
           hash="L6RyshM|-n%2axofRkt7~U%LE3of"
           height={272}
         />
-        <div className="car-details__container">
+        <div className="car-details__container" style={{ marginTop: "1em" }}>
           <div className="car-info__container">
             <div className="img__container">
               <BlurHashImage
@@ -185,7 +185,6 @@ export const Account = () => {
           <div className="car-number__container">
             <span>#9761</span>
           </div>
-          bbB bb
         </div>
         <div className="pickdropoff__container">
           <div className="pickup__container">
@@ -335,8 +334,9 @@ export const Account = () => {
               <BlurHashImage
                 src="images/recent/car1.png"
                 hash="L4BdjM{}1HJ7-V,tIoNu0d7J|en%"
-                width={180}
-                height={100}
+                width={90}
+                height={90}
+                objectFit="contain"
               />
               <div className="info__container">
                 <h3>Nissan GT-R Premium</h3>
@@ -353,8 +353,9 @@ export const Account = () => {
               <BlurHashImage
                 src="images/recent/car2.png"
                 hash="L271o~-;00IU~q%MIUIU00M__3of"
-                width={180}
-                height={100}
+                width={90}
+                height={90}
+                objectFit="contain"
               />
               <div className="info__container">
                 <h3>Nissan Z Sport</h3>
@@ -371,8 +372,9 @@ export const Account = () => {
               <BlurHashImage
                 src="images/recent/car3.png"
                 hash="L24evn-=DgRO_4x^ITM{00ROtoWW"
-                width={180}
-                height={100}
+                width={90}
+                height={90}
+                objectFit="contain"
               />
               <div className="info__container">
                 <h3>Nissan Leaf SV</h3>
@@ -389,8 +391,9 @@ export const Account = () => {
               <BlurHashImage
                 src="images/recent/car4.png"
                 hash="L36*gp?b009F~q%M9FIU00IU?bxu"
-                width={180}
-                height={100}
+                width={90}
+                height={90}
+                objectFit="contain"
               />
               <div className="info__container">
                 <h3>Nissan Ariya Engage FWD</h3>
