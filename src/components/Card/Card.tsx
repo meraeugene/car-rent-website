@@ -81,7 +81,7 @@ export const Card = ({ array }: CardProps) => {
                 <h3>{card.name}</h3>
                 <Tooltip
                   TransitionComponent={Zoom}
-                  placement="top"
+                  placement="bottom"
                   PopperProps={{
                     disablePortal: true,
                   }}

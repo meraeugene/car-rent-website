@@ -127,6 +127,7 @@
     grid-template-areas:
       "aside"
       "category-main";
+    overflow-y: hidden;
   }
 
   .category-grid__container aside {
