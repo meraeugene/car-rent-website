@@ -105,9 +105,15 @@ export const Card = ({ array }: CardProps) => {
                     onClick={toggleLike}
                   >
                     {isLiked ? (
-                      <img src="/images/Like Red.svg" alt="" loading="lazy" />
+                      <i
+                        className="ri-heart-fill"
+                        style={{ fontSize: "1.5rem", color: "red" }}
+                      ></i>
                     ) : (
-                      <img src="/images/Like.svg" alt="" loading="lazy" />
+                      <i
+                        className="ri-heart-line"
+                        style={{ fontSize: "1.5rem" }}
+                      ></i>
                     )}
                   </button>
                 </Tooltip>

@@ -2,6 +2,7 @@ import "./Account.css";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/DarkModeContext";
 import { useContext } from "react";
+import BlurHashImage from "../../components/BlurHashImage/blurHashImage";
 
 export const Account = () => {
   // Use the DarkModeContext to access dark mode state and functions
@@ -160,26 +161,31 @@ export const Account = () => {
       </aside>
       <div className="main-details__container">
         <h1>Details Rental</h1>
-        <img
+        <BlurHashImage
           src="images/details/map.png"
-          alt="map"
           className="map"
-          loading="lazy"
+          hash="L6RyshM|-n%2axofRkt7~U%LE3of"
+          height={272}
         />
         <div className="car-details__container">
           <div className="car-info__container">
             <div className="img__container">
-              <img src="images/details/car.png" alt="car" loading="lazy" />
+              <BlurHashImage
+                hash="LoJkl$WB-;t7~qWBxaof-;fPofof"
+                src="images/details/car.png"
+                height={36}
+                width={116}
+              />
             </div>
             <div>
               <h1>Nissan GT-R</h1>
               <p>Sport Car</p>
             </div>
           </div>
-
           <div className="car-number__container">
             <span>#9761</span>
           </div>
+          bbB bb
         </div>
         <div className="pickdropoff__container">
           <div className="pickup__container">
@@ -326,7 +332,12 @@ export const Account = () => {
         <div className="cars-content">
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car1.png" alt="" loading="lazy" />
+              <BlurHashImage
+                src="images/recent/car1.png"
+                hash="L4BdjM{}1HJ7-V,tIoNu0d7J|en%"
+                width={180}
+                height={100}
+              />
               <div className="info__container">
                 <h3>Nissan GT-R Premium</h3>
                 <p>Sport Car</p>
@@ -339,7 +350,12 @@ export const Account = () => {
           </div>
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car2.png" alt="" loading="lazy" />
+              <BlurHashImage
+                src="images/recent/car2.png"
+                hash="L271o~-;00IU~q%MIUIU00M__3of"
+                width={180}
+                height={100}
+              />
               <div className="info__container">
                 <h3>Nissan Z Sport</h3>
                 <p>Sport Car</p>
@@ -352,7 +368,12 @@ export const Account = () => {
           </div>
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car3.png" alt="" loading="lazy" />
+              <BlurHashImage
+                src="images/recent/car3.png"
+                hash="L24evn-=DgRO_4x^ITM{00ROtoWW"
+                width={180}
+                height={100}
+              />
               <div className="info__container">
                 <h3>Nissan Leaf SV</h3>
                 <p>Electric Car</p>
@@ -365,7 +386,12 @@ export const Account = () => {
           </div>
           <div className="car-info">
             <div className="left">
-              <img src="images/recent/car4.png" alt="" loading="lazy" />
+              <BlurHashImage
+                src="images/recent/car4.png"
+                hash="L36*gp?b009F~q%M9FIU00IU?bxu"
+                width={180}
+                height={100}
+              />
               <div className="info__container">
                 <h3>Nissan Ariya Engage FWD</h3>
                 <p>Electric Car</p>
