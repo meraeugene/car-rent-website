@@ -1,0 +1,11 @@
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #0e1120;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loadingWrapper img {
+  object-fit: cover;
+}

@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import { LikedCarsProvider } from "./context/LikedCarContext";
+import Loading from "./components/Loading/Loading";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Collection = lazy(() => import("./pages/Collection/Collection"));
@@ -26,11 +27,7 @@ const App = () => {
     <div className="App">
       <LikedCarsProvider>
         <Navbar />
-        <Suspense
-          fallback={
-            <h1 style={{ fontFamily: "var(--font-oswold)" }}>Loading....</h1>
-          }
-        >
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cars/:id" element={<CarDetails />} />
