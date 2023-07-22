@@ -89,7 +89,7 @@ const CarDetails = () => {
           <Swiper
             centeredSlides={true}
             autoplay={{
-              delay: 6666.64,
+              delay: 2499.99,
               disableOnInteraction: false,
             }}
             slidesPerView={1}
