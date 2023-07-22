@@ -4,7 +4,7 @@ import { formatCurrency } from "../../utilities/formatCurrency";
 import Reviews from "../../components/Reviews/Reviews";
 import RecentCar from "../../components/RecentCar/RecentCar";
 import RecommendCars from "../../components/RecommendCars/RecommendCars";
-import { Footer } from "..";
+import Footer from "../Footer/Footer";
 import { useContext, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -37,7 +37,7 @@ type CarData = {
   original_price: string;
 };
 
-export const CarDetails = () => {
+const CarDetails = () => {
   // Get the current location and extract the cardData from the state
   const location = useLocation();
   const cardData = (location.state && location.state.cardData) as CarData;
@@ -218,6 +218,7 @@ export const CarDetails = () => {
                   role="CEO at Amazon"
                   desc="We are greatly impressed by the Car Rent application. Car Rent offers an extensive fleet of cars at affordable prices, and their user-friendly interface makes it convenient to book a rental car. The customer service provided by Car Rent is exceptional, with friendly and polite staff."
                   date="9 July 2023"
+                  hash="LAC~I_4:0LW.Io-UNKt603xZ}@xF"
                 />
                 <Reviews
                   title="Jiki Cabrera"
@@ -225,6 +226,7 @@ export const CarDetails = () => {
                   role="Chief Marketing Officer at Google"
                   desc="I highly recommend the Car Rent application for hassle-free car rentals. Car Rent provides a wide range of cars with excellent facilities, all at competitive prices. The officers associated with Car Rent are not only friendly but also highly professional in their services."
                   date="12 July 2023"
+                  hash="LIG8i:I-1UkH1WoP=-x85x^aNOog"
                 />
                 <Reviews
                   title="Maybe Rick"
@@ -232,6 +234,7 @@ export const CarDetails = () => {
                   role="CTO at Microsoft"
                   desc="The Car Rent application has been instrumental in meeting our car rental needs. Car Rent offers a diverse selection of cars with comfortable amenities and reasonable prices. The officers associated with Car Rent are friendly, polite, and provide excellent service. User-friendly interface of the Car Rent application have made."
                   date="10 July 2023"
+                  hash="LHEe[LIX~VDiWAxYRkW=4ns+Rkxv"
                 />
                 <Reviews
                   title="Job en"
@@ -239,6 +242,7 @@ export const CarDetails = () => {
                   role="VP of Operations at Tesla"
                   desc="We have had a fantastic experience using the Car Rent application. Car Rent offers a wide variety of cars with good facilities and comfortable features, all at affordable prices. The service provided by the officers associated with Car Rent is exceptionally friendly and polite."
                   date="11 July 2023"
+                  hash="L9E1,kUb*BIWz,S}}dR#00XTrcxb"
                 />
                 <Reviews
                   title="Shammy"
@@ -246,6 +250,7 @@ export const CarDetails = () => {
                   role="Managing Director at Apple"
                   desc="The Car Rent application has proven to be a valuable resource for our car rental needs. Car Rent offers a comprehensive range of cars with competitive pricing and convenient facilities. The officers associated with Car Rent are friendly, polite, and provide exceptional service."
                   date="13 July 2023"
+                  hash="LAC~eq8xKOxaJTsm~B9t0zJ9WB={"
                 />
                 <Reviews
                   title="Andrés"
@@ -253,6 +258,7 @@ export const CarDetails = () => {
                   role="CFO at Uber"
                   desc="We are highly satisfied with the services offered by the Car Rent application. Car Rent provides a wide variety of cars with good facilities and comfortable amenities, all at affordable prices. The officers associated with Car Rent are friendly, polite, and provide excellent customer service."
                   date="8 July 2023"
+                  hash="L8CitA0J1*~V68oI$$S64Uibn4WX"
                 />
               </>
             ) : (
@@ -263,6 +269,7 @@ export const CarDetails = () => {
                   role="CEO at Amazon"
                   desc="We are greatly impressed by the Car Rent application. Car Rent offers an extensive fleet of cars at affordable prices, and their user-friendly interface makes it convenient to book a rental car. The customer service provided by Car Rent is exceptional, with friendly and polite staff."
                   date="9 July 2023"
+                  hash="LAC~I^4:0LW.Io-UNKt603xZ}@xF"
                 />
                 <Reviews
                   title="Jiki Cabrera"
@@ -270,6 +277,7 @@ export const CarDetails = () => {
                   role="Chief Marketing Officer at Google"
                   desc="I highly recommend the Car Rent application for hassle-free car rentals. Car Rent provides a wide range of cars with excellent facilities, all at competitive prices. The officers associated with Car Rent are not only friendly but also highly professional in their services."
                   date="12 July 2023"
+                  hash="LIG8i:I-1UkH1WoP=-x85x^aNOog"
                 />
                 <Reviews
                   title="Maybe Rick"
@@ -277,6 +285,7 @@ export const CarDetails = () => {
                   role="CTO at Microsoft"
                   desc="The Car Rent application has been instrumental in meeting our car rental needs. Car Rent offers a diverse selection of cars with comfortable amenities and reasonable prices. The officers associated with Car Rent are friendly, polite, and provide excellent service. User-friendly interface of the Car Rent application have made."
                   date="10 July 2023"
+                  hash="LHEe[LIX~VDiWAxYRkW=4ns+Rkxv"
                 />
               </>
             )}
@@ -314,3 +323,5 @@ export const CarDetails = () => {
     </>
   );
 };
+
+export default CarDetails;

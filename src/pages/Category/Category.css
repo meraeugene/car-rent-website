@@ -2,6 +2,7 @@
   display: grid;
   grid-template-areas: "aside category-main";
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .category-grid__container aside {

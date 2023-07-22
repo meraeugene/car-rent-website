@@ -1,6 +1,5 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import "./CarPickDropCard.css";
-import { DarkModeContext } from "../../context/DarkModeContext";
 
 type CarPickDropProps = {
   headerTitle: string;
@@ -8,6 +7,7 @@ type CarPickDropProps = {
   date: string;
   time: string;
   aos: string;
+  id: string;
 };
 
 export const CarPickDropCard = (props: CarPickDropProps) => {
@@ -23,16 +23,6 @@ export const CarPickDropCard = (props: CarPickDropProps) => {
     setDefaultTime(formattedTime);
   }, []);
 
-  // dark mode
-  const darkModeContext = useContext(DarkModeContext);
-
-  if (!darkModeContext) {
-    // Handle the case where the context is undefined
-    return null;
-  }
-
-  const { isActive } = darkModeContext;
-
   return (
     <div className="pickdrop__container" data-aos={props.aos}>
       <div className="pickdrop__container-header">
@@ -44,17 +34,7 @@ export const CarPickDropCard = (props: CarPickDropProps) => {
       <div className="pickdrop__container-body-flex">
         <div className="location">
           <h3>{props.location}</h3>
-          <select
-            name="cities"
-            id="#"
-            defaultValue=""
-            style={{
-              // Dynamically set the background image based on dark mode status
-              backgroundImage: isActive
-                ? "var(--arrow-icon-dark)"
-                : "var(--arrow-icon-light)",
-            }}
-          >
+          <select name="cities" id={props.id} defaultValue="">
             <option disabled hidden value="">
               Select your city
             </option>

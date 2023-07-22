@@ -1,3 +1,4 @@
+import BlurHashImage from "../BlurHashImage/blurHashImage";
 import "./Reviews.css";
 
 type ReviewsProps = {
@@ -6,14 +7,21 @@ type ReviewsProps = {
   role: string;
   desc: string;
   date: string;
+  hash: string;
 };
 
-const Reviews = ({ img, title, role, desc, date }: ReviewsProps) => {
+const Reviews = ({ img, title, role, desc, date, hash }: ReviewsProps) => {
   return (
     <div className="reviews__container-content">
       <div className="reviews-content__body">
         <div className="reviews-content-profile">
-          <img src={img} alt="profile" loading="lazy" />
+          <BlurHashImage
+            src={img}
+            hash={hash}
+            width={56}
+            height={56}
+            className="reviews-content-profile-img "
+          />
           <div className="reviews-content-desc">
             <h2>{title}</h2>
             <h4>{role}</h4>

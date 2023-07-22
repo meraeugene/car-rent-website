@@ -26,9 +26,6 @@
   --color-bg: #f6f7f9;
   --static-white: #fff;
   --card-bg: #ffffff;
-
-  --arrow-icon-light: url("../public/images/arrowdownfill.png");
-  --arrow-icon-dark: url("../public/images/arrowdowndark.png"); /* Dark mode image */
 }
 
 .darkmode {
@@ -138,16 +135,6 @@ a {
 
 .star {
   color: #ffff00;
-}
-
-.location select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../public/images/arrowdownfill.png");
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: right center;
 }
 
 ::-webkit-calendar-picker-indicator {

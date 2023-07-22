@@ -140,7 +140,7 @@ const Navbar = () => {
               onClick={handleLogoClick}
             >
               <img
-                src={`/images/carrentlogo.png`}
+                src="/public/images/carrentlogo.png"
                 alt="car rent logo"
                 style={{ width: "40px", height: "40px" }}
                 loading="lazy"
@@ -164,7 +164,7 @@ const Navbar = () => {
             onClick={handleLogoClick}
           >
             <img
-              src={`/images/carrentlogo.png`}
+              src="/public/images/carrentlogo.png"
               alt="car rent logo"
               style={{ width: "40px", height: "100%" }}
               loading="lazy"
@@ -180,6 +180,8 @@ const Navbar = () => {
                   className="search__input"
                   value={query}
                   onChange={handleInputChange}
+                  id="#"
+                  name="#"
                 />
                 <div className="search__button" onClick={toggleSearch}>
                   <i className="ri-search-2-line search__icon"></i>
@@ -218,7 +220,10 @@ const Navbar = () => {
             <div className="nav__menu">
               <Link to="/collection" className="icon ">
                 <div className="heart-container">
-                  <img src={`/images/heart.svg`} alt="heart" loading="lazy" />
+                  <i
+                    className="ri-heart-3-fill"
+                    style={{ fontSize: "1.2rem", color: "#596780" }}
+                  ></i>
                   {likedCarsCount > 0 && (
                     <div className="likedCarsCounter">{likedCarsCount}</div>
                   )}
@@ -226,20 +231,18 @@ const Navbar = () => {
               </Link>
               <Link to="/notifications" className="icon">
                 <div className="icon-container">
-                  <img
-                    src={`/images/notification.svg`}
-                    alt="notif"
-                    loading="lazy"
-                  />
+                  <i
+                    className="ri-notification-4-fill"
+                    style={{ fontSize: "1.2rem", color: "#596780" }}
+                  ></i>
                 </div>
               </Link>
               <Link to="/settings" className="icon">
                 <div className="icon-container">
-                  <img
-                    src={`/images/setting-2.svg`}
-                    alt="settings"
-                    loading="lazy"
-                  />
+                  <i
+                    className="ri-settings-3-fill"
+                    style={{ fontSize: "1.2rem", color: "#596780" }}
+                  ></i>
                 </div>
               </Link>
               <Link to="/account" className="icon">

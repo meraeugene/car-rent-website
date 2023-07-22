@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, useContext } from "react";
-import { Footer } from "..";
+import Footer from "../Footer/Footer";
 import { CarPickDropCard } from "../../components/CarPickDropCard/CarPickDropCard";
 import { Card } from "../../components/Card/Card";
 import "./Category.css";
@@ -114,7 +114,7 @@ const Category = () => {
             className="logo-aside"
           >
             <img
-              src={`/images/carrentlogo.png`}
+              src="/public/images/carrentlogo.png"
               alt="car rent logo"
               style={{ width: "40px", height: "40px" }}
               loading="lazy"
@@ -128,10 +128,11 @@ const Category = () => {
                   <input
                     type="checkbox"
                     value={carType}
+                    id={`type_${carType}`} // Add a unique id for the checkbox
                     checked={filterType.includes(carType)}
                     onChange={(e) => handleFilter(e, filterType, setFilterType)}
                   />
-                  <label htmlFor={carType}>
+                  <label htmlFor={`type_${carType}`}>
                     {carType} <span className="offwhite-text"> ({count})</span>
                   </label>
                 </div>
@@ -146,13 +147,14 @@ const Category = () => {
                     <input
                       type="checkbox"
                       value={carCapacity}
+                      id={`capacity_${carCapacity}`} // Add a unique id for the capacity checkbox
                       checked={filterCapacity.includes(carCapacity)}
                       onChange={(e) =>
                         handleFilter(e, filterCapacity, setFilterCapacity)
                       }
                     />
-                    <label htmlFor={`${carCapacity}person`}>
-                      {carCapacity} Person{" "}
+                    <label htmlFor={`capacity_${carCapacity}`}>
+                      {carCapacity} Person
                       <span className="offwhite-text"> ({count})</span>
                     </label>
                   </div>
@@ -160,6 +162,7 @@ const Category = () => {
               )}
             </div>
           </form>
+
           <div
             className="close__button-container"
             onClick={handleFilterAsideToggle}
@@ -176,6 +179,7 @@ const Category = () => {
               date="Date"
               time="Time"
               aos="fade-right"
+              id="pick-up-location"
             />
 
             <CarPickDropCard
@@ -184,6 +188,7 @@ const Category = () => {
               date="Date"
               time="Time"
               aos="fade-left"
+              id="drop-off-location"
             />
           </div>
 

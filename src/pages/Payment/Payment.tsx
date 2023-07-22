@@ -109,6 +109,7 @@ const Payment = () => {
                   <label htmlFor="name">Name</label>
                   <Field
                     type="text"
+                    id="name"
                     name="name"
                     placeholder="Name"
                     autoComplete="name"
@@ -124,6 +125,7 @@ const Payment = () => {
                   <label htmlFor="phone">Phone Number</label>
                   <Field
                     type="number"
+                    id="phone"
                     name="phone"
                     placeholder="Phone number"
                     autoComplete="tel-national"
@@ -140,7 +142,9 @@ const Payment = () => {
                   <Field
                     type="email"
                     name="email"
+                    id="email"
                     placeholder="Email Address"
+                    autoComplete="email"
                   />
                   <ErrorMessage
                     name="email"
@@ -151,7 +155,13 @@ const Payment = () => {
 
                 <div className="input-box">
                   <label htmlFor="address">Address</label>
-                  <Field type="text" name="address" placeholder="Address" />
+                  <Field
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder="Address"
+                    autoComplete="street-address"
+                  />
                   <ErrorMessage
                     name="address"
                     component="div"
@@ -183,7 +193,11 @@ const Payment = () => {
                 <div className="user-details">
                   <div className="input-box">
                     <label htmlFor="pickup_location">Locations</label>
-                    <Field name="pickup_location" as="select">
+                    <Field
+                      name="pickup_location"
+                      as="select"
+                      id="pickup_location"
+                    >
                       <option hidden>Select your city</option>
                       <option value="manila">Manila</option>
                       <option value="cebu">Cebu</option>
@@ -199,7 +213,7 @@ const Payment = () => {
                   </div>
                   <div className="input-box">
                     <label htmlFor="pickup_date">Date</label>
-                    <Field type="date" name="pickup_date" />
+                    <Field type="date" name="pickup_date" id="pickup_date" />
                     <ErrorMessage
                       name="pickup_date"
                       component="div"
@@ -208,7 +222,7 @@ const Payment = () => {
                   </div>
                   <div className="input-box">
                     <label htmlFor="pickup_time">Time</label>
-                    <Field type="time" name="pickup_time" />
+                    <Field type="time" name="pickup_time" id="pickup_time" />
                     <ErrorMessage
                       name="pickup_time"
                       component="div"
@@ -231,7 +245,7 @@ const Payment = () => {
                 <div className="user-details">
                   <div className="input-box">
                     <label htmlFor="drop_location">Locations</label>
-                    <Field name="drop_location" as="select">
+                    <Field name="drop_location" as="select" id="drop_location">
                       <option hidden>Select your city</option>
                       <option value="manila">Manila</option>
                       <option value="cebu">Cebu</option>
@@ -247,7 +261,7 @@ const Payment = () => {
                   </div>
                   <div className="input-box">
                     <label htmlFor="drop_date">Date</label>
-                    <Field type="date" name="drop_date" />
+                    <Field type="date" name="drop_date" id="drop_date" />
                     <ErrorMessage
                       name="drop_date"
                       component="div"
@@ -256,7 +270,7 @@ const Payment = () => {
                   </div>
                   <div className="input-box">
                     <label htmlFor="drop_time">Time</label>
-                    <Field type="time" name="drop_time" />
+                    <Field type="time" name="drop_time" id="drop_time" />
                     <ErrorMessage
                       name="drop_time"
                       component="div"
@@ -299,6 +313,8 @@ const Payment = () => {
                       type="number"
                       name="cardNumber"
                       placeholder="Card Number"
+                      id="card-number"
+                      autoComplete="cc-number"
                     />
                     <ErrorMessage
                       name="cardNumber"
@@ -308,7 +324,12 @@ const Payment = () => {
                   </div>
                   <div className="input-box">
                     <label htmlFor="expiration-date">Expiration Date</label>
-                    <Field type="date" name="expirationDate" />
+                    <Field
+                      type="date"
+                      name="expirationDate"
+                      id="expiration-date"
+                      autoComplete="cc-exp"
+                    />
                     <ErrorMessage
                       name="expirationDate"
                       component="div"
@@ -321,6 +342,8 @@ const Payment = () => {
                       type="text"
                       name="cardHolder"
                       placeholder="Card Holder"
+                      id="card-holder"
+                      autoComplete="cc-name"
                     />
                     <ErrorMessage
                       name="cardHolder"
@@ -330,7 +353,13 @@ const Payment = () => {
                   </div>
                   <div className="input-box">
                     <label htmlFor="CVC">CVC</label>
-                    <Field type="number" name="cvc" placeholder="CVC" />
+                    <Field
+                      type="number"
+                      name="cvc"
+                      placeholder="CVC"
+                      id="CVC"
+                      autoComplete="cc-csc"
+                    />
                     <ErrorMessage
                       name="cvc"
                       component="div"
@@ -343,7 +372,13 @@ const Payment = () => {
               <div className="paypal__container">
                 <div className="flex-between">
                   <div className="flex-normal">
-                    <Field type="radio" value="paypal" name="paymentMethod" />
+                    <Field
+                      type="radio"
+                      value="paypal"
+                      name="paymentMethod"
+                      id="paypal"
+                      autoComplete="cc-type"
+                    />
                     <label htmlFor="paypal">Paypal</label>
                   </div>
                   <img src="/images/PayPal.svg" alt="paypal" loading="lazy" />
@@ -353,7 +388,13 @@ const Payment = () => {
               <div className="bitcoin__container">
                 <div className="flex-between">
                   <div className="flex-normal">
-                    <Field type="radio" value="bitcoin" name="paymentMethod" />
+                    <Field
+                      type="radio"
+                      value="bitcoin"
+                      name="paymentMethod"
+                      id="bitcoin"
+                      autoComplete="cc-type"
+                    />
                     <label htmlFor="bitcoin">Bitcoin</label>
                   </div>
                   {isActive ? (
@@ -397,7 +438,7 @@ const Payment = () => {
                       name="agreeMarket"
                       id="agreeMarket"
                     />
-                    <label htmlFor="checkbox">
+                    <label htmlFor="agreeMarket">
                       I agree with sending Marketing and newsletter emails.
                     </label>
                   </div>
@@ -479,7 +520,7 @@ const Payment = () => {
               </div>
 
               <div className="promo-code">
-                <input type="text" placeholder="Promo Code" />
+                <input type="text" placeholder="Promo Code" id="#" />
                 <button>Apply Now</button>
               </div>
 

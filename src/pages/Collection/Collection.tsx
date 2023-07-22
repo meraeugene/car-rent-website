@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { LikedCarsContext } from "../../context/LikedCarContext";
-import { Footer } from "..";
+import Footer from "../Footer/Footer";
 import "./Collection.css";
 import { Card } from "../../components/Card/Card";
 import { DarkModeContext } from "../../context/DarkModeContext";
 
-export const Collection = () => {
+const Collection = () => {
   const likedCarsContext = useContext(LikedCarsContext);
   const darkModeContext = useContext(DarkModeContext);
 
@@ -23,12 +23,10 @@ export const Collection = () => {
       <div className={`section__padding ${isActive ? "darkmode" : ""}`}>
         {isEmpty ? (
           <h1 className="title custom-padding">
-            Like cars to add them to your personal showcase.
+            Like cars to add them to your collection.
           </h1>
         ) : (
-          <h1 className="title custom-message-margin">
-            Ride the Thrill: Your Personal Car Showcase!
-          </h1>
+          <h1 className="title custom-message-margin">Car Collection</h1>
         )}
 
         <div className="likedPopularCars-Container">
@@ -39,3 +37,5 @@ export const Collection = () => {
     </>
   );
 };
+
+export default Collection;

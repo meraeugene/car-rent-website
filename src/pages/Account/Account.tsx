@@ -4,7 +4,7 @@ import { DarkModeContext } from "../../context/DarkModeContext";
 import { useContext } from "react";
 import BlurHashImage from "../../components/BlurHashImage/blurHashImage";
 
-export const Account = () => {
+const Account = () => {
   // Use the DarkModeContext to access dark mode state and functions
   const darkModeContext = useContext(DarkModeContext);
 
@@ -35,39 +35,45 @@ export const Account = () => {
 
           <ul>
             <Link to="/account" className="active custom-link">
-              <img
-                src="images/aside icons/home.svg"
-                alt="home"
-                loading="lazy"
-              />
+              <i
+                className="ri-home-4-fill"
+                style={{ fontSize: "1.5rem", color: "#FFFFFF" }}
+              ></i>
               <span>Dashboard</span>
             </Link>
             <Link to="/" className="custom-link">
-              <img src="images/aside icons/car.svg" alt="car" loading="lazy" />
+              <i
+                className="ri-police-car-fill"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
               <span>Car Rent</span>
             </Link>
             <Link to="/insight" className="custom-link">
-              <img
-                src="images/aside icons/chart.svg"
-                alt="chart"
-                loading="lazy"
-              />
+              <i
+                className="ri-bar-chart-2-line"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
               <span>Insight</span>
             </Link>
             <Link to="/reimburse" className="custom-link">
-              <img
-                src="images/aside icons/empty-wallet-change.svg"
-                alt="empty wallet"
-                loading="lazy"
-              />
+              <i
+                className="ri-wallet-line"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
               <span>Reimburse</span>
             </Link>
+            <Link to="/inbox" className="custom-link">
+              <i
+                className="ri-message-2-line"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
+              <span>Inbox</span>
+            </Link>
             <Link to="/calendar" className="custom-link">
-              <img
-                src="images/aside icons/calendar.svg"
-                alt="calendar"
-                loading="lazy"
-              />
+              <i
+                className="ri-calendar-line"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
               <span>Calendar</span>
             </Link>
           </ul>
@@ -84,29 +90,26 @@ export const Account = () => {
           <span>PREFERENCES</span>
           <ul>
             <Link to="/settings" className=" custom-link">
-              <img
-                src="images/aside icons/setting.svg"
-                alt="setting"
-                loading="lazy"
-              />
+              <i
+                className="ri-settings-line"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
               <span>Settings</span>
             </Link>
             <Link to="/helpcenter" className="custom-link">
-              <img
-                src="images/aside icons/info-circle.svg"
-                alt="help&center"
-                loading="lazy"
-              />
+              <i
+                className="ri-information-line"
+                style={{ fontSize: "1.5rem", color: "#596780" }}
+              ></i>
               <span>Help & Center</span>
             </Link>
             <li className="custom-link">
               <div className="flex-between">
                 <div className="darkmode-left-col">
-                  <img
-                    src="images/aside icons/briefcase.svg"
-                    alt="briefcase"
-                    loading="lazy"
-                  />
+                  <i
+                    className="ri-moon-line"
+                    style={{ fontSize: "1.5rem", color: "#596780" }}
+                  ></i>
                   <span className="darkmodetxt">Dark Mode</span>
                 </div>
                 <div
@@ -143,11 +146,10 @@ export const Account = () => {
         </div>
 
         <div className="logout">
-          <img
-            src="images/aside icons/logout.svg"
-            alt="logout"
-            loading="lazy"
-          />
+          <i
+            className="ri-logout-box-line"
+            style={{ fontSize: "1.5rem", color: "#596780" }}
+          ></i>
           <span>Log Out</span>
         </div>
       </aside>
@@ -192,7 +194,7 @@ export const Account = () => {
                 <span>Locations</span>
                 <select
                   name="cities"
-                  id="#"
+                  id="pickup-location"
                   style={{
                     // Dynamically set the background image based on dark mode status
                     backgroundImage: isActive
@@ -231,7 +233,7 @@ export const Account = () => {
                 <span>Locations</span>
                 <select
                   name="cities"
-                  id="#"
+                  id="dropoff-location"
                   style={{
                     // Dynamically set the background image based on dark mode status
                     backgroundImage: isActive
@@ -303,7 +305,12 @@ export const Account = () => {
             <h3>72,030</h3>
             <h4>Rental Car</h4>
             <div className="ellipse__container">
-              <img src="/images/top/Chart.svg" alt="chart" loading="lazy" />
+              <img
+                src="/images/top/Chart.svg"
+                alt="chart"
+                loading="lazy"
+                style={{ width: "190px", objectFit: "cover" }}
+              />
             </div>
           </div>
           <div className="content-right-col">
@@ -446,3 +453,5 @@ export const Account = () => {
     </div>
   );
 };
+
+export default Account;

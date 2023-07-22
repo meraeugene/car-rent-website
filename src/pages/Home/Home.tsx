@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { Cars, Footer } from "..";
+import Cars from "../Cars/Cars";
+import Footer from "../Footer/Footer";
 import { CarPickDropCard } from "../../components/CarPickDropCard/CarPickDropCard";
 import { HomeCard } from "../../components/HomeCard/HomeCard";
 import "./Home.css";
@@ -49,6 +50,7 @@ const Home = () => {
             date="Date"
             time="Time"
             aos="fade-right"
+            id="pick-up-location"
           />
 
           <CarPickDropCard
@@ -57,6 +59,7 @@ const Home = () => {
             date="Date"
             time="Time"
             aos="fade-left"
+            id="drop-off-location"
           />
         </div>
       </div>

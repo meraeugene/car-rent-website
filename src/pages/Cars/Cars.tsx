@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/DarkModeContext";
 
-export const Cars = () => {
+const Cars = () => {
   const popular = data.filter((data) => data.section === "popular");
   const recommend = data.filter((data) => data.section === "recommend");
 
@@ -45,3 +45,5 @@ export const Cars = () => {
     </>
   );
 };
+
+export default Cars;

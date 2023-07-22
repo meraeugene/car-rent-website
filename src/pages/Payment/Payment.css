@@ -259,7 +259,7 @@ form .input-box input[type="date"] {
 .payment-method__header p,
 .payment-method__header span {
   color: var(--offwhite-text);
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -267,7 +267,7 @@ form .input-box input[type="date"] {
 }
 
 .payment-method__header {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .payment-method__credit-card {
@@ -308,14 +308,14 @@ form .input-box input[type="date"] {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: -0.6px;
 }
 
 .confirmation__header p,
 .confirmation__header span {
   color: var(--offwhite-text);
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;

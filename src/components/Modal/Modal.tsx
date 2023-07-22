@@ -11,7 +11,7 @@ const Modal = ({ toggleModal, emailValue }: ModalProps) => {
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
         <img
-          src="/images/message.svg"
+          src="/images/message.gif"
           alt="email sent"
           className="message"
           loading="lazy"
@@ -29,7 +29,10 @@ const Modal = ({ toggleModal, emailValue }: ModalProps) => {
         <p className="recovery">Still can't find the email? No problem.</p>
         <button className="recoveryBtn">Resend Verification Email</button>
         <div className="close-modal" onClick={toggleModal}>
-          <i className="ri-close-line " style={{ fontSize: "1.5rem" }}></i>
+          <i
+            className="ri-close-line close-btn"
+            style={{ fontSize: "1.5rem" }}
+          ></i>
         </div>
       </div>
     </div>
