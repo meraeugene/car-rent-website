@@ -72,7 +72,7 @@
   letter-spacing: -0.24px;
   border: 1px solid var(--offwhite-text);
   padding: 0.3rem;
-  width: 100%;
+  width: 100% !important;
   height: 40px;
   background: var(--white);
   border-radius: 4px;

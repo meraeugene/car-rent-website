@@ -52,7 +52,7 @@ form .input-box label {
 form .input-box input,
 form .input-box select,
 form .input-box input[type="date"] {
-  width: 100%;
+  width: 100% !important;
   height: 56px;
   outline: none;
   padding: 0.3rem 0.5rem;
@@ -244,6 +244,7 @@ form .input-box input[type="date"] {
   border-radius: 10px;
   font-family: var(--font-oswold);
   width: 100%;
+  color: var(--text-color);
 }
 
 .payment-method__header h2 {

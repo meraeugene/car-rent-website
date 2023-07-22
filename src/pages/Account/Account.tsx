@@ -190,7 +190,16 @@ export const Account = () => {
             <div className="pickup-info__container">
               <div className="location">
                 <span>Locations</span>
-                <select name="cities" id="#">
+                <select
+                  name="cities"
+                  id="#"
+                  style={{
+                    // Dynamically set the background image based on dark mode status
+                    backgroundImage: isActive
+                      ? "var(--arrow-icon-dark)"
+                      : "var(--arrow-icon-light)",
+                  }}
+                >
                   <option value="Cagayan de Oro">Cagayan de Oro</option>
                   <option value="manila">Manila</option>
                   <option value="cebu">Cebu</option>
@@ -220,7 +229,16 @@ export const Account = () => {
             <div className="dropoff-info__container">
               <div className="location">
                 <span>Locations</span>
-                <select name="cities" id="#">
+                <select
+                  name="cities"
+                  id="#"
+                  style={{
+                    // Dynamically set the background image based on dark mode status
+                    backgroundImage: isActive
+                      ? "var(--arrow-icon-dark)"
+                      : "var(--arrow-icon-light)",
+                  }}
+                >
                   <option value="Davao">Davao</option>
                   <option value="manila">Manila</option>
                   <option value="cebu">Cebu</option>

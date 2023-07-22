@@ -20,14 +20,19 @@
   --bg-modal: rgba(49, 49, 49, 0.8);
   --text-color: #000000;
   --box-shadow: rgba(0, 0, 0, 0.1);
+  --nav-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   --color-select: #90a3bf;
   --border-color: rgba(195, 212, 233, 0.4);
   --color-bg: #f6f7f9;
   --static-white: #fff;
   --card-bg: #ffffff;
+
+  --arrow-icon-light: url("../public/images/arrowdownfill.png");
+  --arrow-icon-dark: url("../public/images/arrowdowndark.png"); /* Dark mode image */
 }
 
 .darkmode {
+  --nav-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   --card-bg: #303030;
   --bg-blue-offblue: #1d3e7e;
   --bg-blue-mediumblue: #0f4c91;
@@ -133,6 +138,23 @@ a {
 
 .star {
   color: #ffff00;
+}
+
+.location select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../public/images/arrowdownfill.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar {
