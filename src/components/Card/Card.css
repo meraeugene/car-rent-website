@@ -78,7 +78,7 @@
   color: var(--h2-color);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .col h3 {
     font-size: 1rem;
   }

@@ -137,11 +137,11 @@ export const CarDetails = () => {
             <div className="car-context__header">
               <h1>{cardData.name}</h1>
               <div className="car-context__header-flex">
-                <img src="/images/star.png" alt="star" loading="lazy" />
-                <img src="/images/star.png" alt="star" loading="lazy" />
-                <img src="/images/star.png" alt="star" loading="lazy" />
-                <img src="/images/star.png" alt="star" loading="lazy" />
-                <img src="/images/star-empty.png" alt="star" loading="lazy" />
+                <i className="ri-star-fill star"></i>
+                <i className="ri-star-fill star"></i>
+                <i className="ri-star-fill star"></i>
+                <i className="ri-star-fill star"></i>
+                <i className="ri-star-line star"></i>
 
                 <span>440+ Reviewer</span>
               </div>

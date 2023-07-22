@@ -95,7 +95,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .best h1,
   .easy h1 {
     font-size: 2rem;

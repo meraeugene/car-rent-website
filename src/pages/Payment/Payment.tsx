@@ -356,7 +356,19 @@ const Payment = () => {
                     <Field type="radio" value="bitcoin" name="paymentMethod" />
                     <label htmlFor="bitcoin">Bitcoin</label>
                   </div>
-                  <img src="/images/Bitcoin.svg" alt="bitcoin" loading="lazy" />
+                  {isActive ? (
+                    <img
+                      src="/images/bitcoindark.svg"
+                      alt="bitcoin"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <img
+                      src="/images/Bitcoin.svg"
+                      alt="bitcoin"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               </div>
               <ErrorMessage
@@ -441,16 +453,14 @@ const Payment = () => {
                 </div>
                 <div className="car-desc">
                   <h1>{name}</h1>
-                  <div className="flex-nogap">
-                    <img src="/images/star.png" alt="star" loading="lazy" />
-                    <img src="/images/star.png" alt="star" loading="lazy" />
-                    <img src="/images/star.png" alt="star" loading="lazy" />
-                    <img src="/images/star.png" alt="star" loading="lazy" />
-                    <img
-                      src="/images/star-empty.png"
-                      alt="star"
-                      loading="lazy"
-                    />
+                  <div>
+                    <div className="stars">
+                      <i className="ri-star-fill star"></i>
+                      <i className="ri-star-fill star"></i>
+                      <i className="ri-star-fill star"></i>
+                      <i className="ri-star-fill star"></i>
+                      <i className="ri-star-line star"></i>
+                    </div>
                     <span>440+ Reviewer</span>
                   </div>
                 </div>

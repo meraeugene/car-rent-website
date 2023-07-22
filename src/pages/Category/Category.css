@@ -186,7 +186,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .cards-grid__container {
     grid-template-columns: 1fr;
     padding: 1.5em;

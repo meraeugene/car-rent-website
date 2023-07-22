@@ -52,12 +52,6 @@
   user-select: none;
 }
 
-input[type="text"],
-input[type="search"],
-button {
-  -webkit-appearance: none !important;
-}
-
 .rentnowBtn {
   width: 116px;
   height: 44px;
@@ -137,6 +131,10 @@ a {
   flex-wrap: wrap;
 }
 
+.star {
+  color: yellow;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -169,7 +167,7 @@ a {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .rentnowBtn {
     width: 100px;
     height: 36px;

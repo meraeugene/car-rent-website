@@ -66,13 +66,16 @@
 .time input {
   color: var(--color-select);
   outline: none;
-  font-size: 12px;
+  font-size: 1rem;
   font-family: var(--font-oswold);
   font-weight: 500;
   letter-spacing: -0.24px;
   border: 1px solid var(--offwhite-text);
   padding: 0.3rem;
   width: 100%;
+  height: 40px;
+  background: var(--white);
+  border-radius: 4px;
 }
 
 .location option {
