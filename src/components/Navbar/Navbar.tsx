@@ -164,7 +164,7 @@ const Navbar = () => {
             onClick={handleLogoClick}
           >
             <img
-              src="/public/images/carrentlogo.png"
+              src="/images/carrentlogo.png"
               alt="car rent logo"
               style={{ width: "40px", height: "100%" }}
               loading="lazy"
