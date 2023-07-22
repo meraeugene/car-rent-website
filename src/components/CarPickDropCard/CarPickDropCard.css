@@ -64,7 +64,7 @@
 .location select,
 .date input,
 .time input {
-  color: var(--color-select);
+  color: var(--offwhite-text);
   outline: none;
   font-size: 1rem;
   font-family: var(--font-oswold);
