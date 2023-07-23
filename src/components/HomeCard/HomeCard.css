@@ -1,7 +1,7 @@
 .best {
   background: var(--bg-blue-mediumblue);
   border-radius: 8px;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   height: 330px;
   position: relative;
@@ -11,7 +11,7 @@
 .easy {
   background: var(--bg-blue-offblue);
   border-radius: 8px;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   height: 330px;
   position: relative;
@@ -119,10 +119,10 @@
     max-width: 250px;
   }
 
-  /* .best,
+  .best,
   .easy {
     padding: 1rem;
-  } */
+  }
 
   .best p,
   .easy p {
